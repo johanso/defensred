@@ -1,14 +1,14 @@
 
 /*!
-  Theme Name: Moz
+  Theme Name: myTheme
   Theme URI: 
   Author: Johan Ricardo
   Author URI: johanricardo.co
-  Description: Theme diseñado para los proyectos moz
+  Description: Theme diseñado para los proyectos propios
   Version: 1.0
   License: GNU General Public License v2 or later
   License URI: http://www.gnu.org/licenses/gpl-2.0.html
-  Text Domain: traveltheme
+  Text Domain: myTheme
 */
 
 // ABSTRACTS
@@ -23,9 +23,15 @@
 
 // COMPONENTS
 @use 'components/_buttons';
+@use 'components/_hero';
+@use 'components/_logo';
 @use 'components/_header';
+@use 'components/_banner-cta';
+@use 'components/_section-title';
+@use 'components/_services';
+@use 'components/_section-blog';
 @use 'components/_nav-top';
-@use 'components/_accordion';
+@use 'components/_faq';
 @use 'components/_list-group-post';
 @use 'components/_breadcrumbs';
 @use 'components/_sidebar';
@@ -33,6 +39,7 @@
 @use 'components/_footer';
 @use 'components/_go-top';
 @use 'components/custom-info';
+@use 'components/_popup';
 @use 'components/_plugins';
 @use 'components/wordpress';
 
@@ -40,3 +47,11 @@
 @use 'layout/_home';
 @use 'layout/_page';
 @use 'layout/_post';
+@use 'layout/_blog';
+
+@use './abstracts/mixins' as *;
+@use './abstracts/variables' as *;
+
+.main-container {
+  @include responsive-container();
+}

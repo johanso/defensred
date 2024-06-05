@@ -3,7 +3,6 @@
 @use '../abstracts/functions' as *;
 
 .header {
-  @include box-shadow(0, 2px, 4px, rgba(0, 0, 0, 0.05));
   position: fixed;
   background-repeat: no-repeat;
   background-size: cover;
@@ -12,6 +11,7 @@
   padding: 0;
   width: 100%;
   z-index: 2;
+  transition: all linear .2s;
 
   &.hidden {
     transform: translateY(-100%);
@@ -21,6 +21,40 @@
   &.visible {
     transform: translateY(0);
     transition: transform 0.3s ease;
+    background-color: $white-color;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.079);
+    .menu-item a,
+    .logo a {
+      color: $text-color;
+      &:hover {
+        color: $primary-color;
+      }
+    }
+    .header__menu-icon span {
+      background: $text-color;
+    }
+    [class*="logo"] img {
+      filter: none;
+      @include mq(lg) {
+      }
+    }
+  }
+
+  &.opened {
+    .menu-item a,
+    .logo a {
+      color: $white-color;
+    }
+    .header__menu-icon span {
+      background: $white-color;
+    }
+    &.visible [class*=logo] img {
+      filter: invert(1);
+    }
+  }
+
+  &.opened.hidden {
+    transform: translateY(0);
   }
 
   &__container {
@@ -28,26 +62,15 @@
     align-items: center;
     height: calc(map-get($sizes, xxl) + map-get($sizes, s)); 
     @include responsive-container();
+    margin: 0;
     @include mq(md) {
       height: 100%;
-    }
-    &::after {
-      content: '';
-      background: $primary-color;
-      width: 7rem;
-      position: absolute;
-      height: 100%;
-      z-index: 0;
-      display: flex;
-      box-shadow: -7rem 0px 0 $primary-color, -14rem 0px 0 0 $primary-color, -21rem 0px 0 0 $primary-color, -28rem 0px 0 0 $primary-color, -35rem 0px 0 0 $primary-color, -42rem 0px 0 0 $primary-color, -49rem 0px 0 0 $primary-color;
-      transform: skewX(-30deg);
     }
   }
 
   &__top {
-    background: $white-color;
     @include mq(md) {
-      height: map-get($sizes, xxxl);
+      height: 3.5rem;
     }
   }
 
@@ -59,8 +82,9 @@
     position: relative;
     margin-left: auto;
     cursor: pointer;
+    z-index: 2;
     span {
-      background: $secondary-color;
+      background: $white-color;
       display: block;
       width: map-get($sizes, l);
       height: 1px;
@@ -93,49 +117,4 @@
       display: none;
     }
   }
-
-  &__logo {
-    position: relative;
-    z-index: 1;
-    &:hover {
-      span:after {
-        background: rgba(0, 0, 0, 0.7);
-      }
-    }
-    &-text {
-      font-family: var(--font-logo);
-      color: $text-color;
-      font-size: 1rem;
-      position: relative;
-      gap: .65rem;
-      display: flex;
-      align-items: center;
-      text-transform: uppercase;
-      span {
-        color: $white-color;
-        position: relative;
-        font-size: 1.25rem;
-        &::after {
-          content: '';
-          background: $text-color;
-          width: 2.25rem;
-          position: absolute;
-          height: 2.25rem;
-          left: -.5rem;
-          z-index: -1;
-          top: -.5rem;
-          border-radius: .25rem;
-          transition: all .1s linear;
-          @include mq(md) {
-            height: 2rem;
-            top: -.25rem;
-          }
-        }
-      }
-    }
-    a {
-      text-decoration: none;
-    }
-  }
-
 }

@@ -7,6 +7,8 @@ body {
   margin: 0;
   &.no-scroll {
     overflow: hidden;
+    scrollbar-width: none;
+    
   }
 }
 
@@ -27,6 +29,10 @@ pre {
 
 a {
   background-color: transparent;
+  color: #0e1625;
+  &:hover {
+    text-decoration: none;
+  }
 }
 
 

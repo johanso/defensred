@@ -5,7 +5,7 @@
 .goto-top {
   width: map-get($sizes, xxl);
   height: map-get($sizes, xxl);
-  background: $primary-color;
+  background: $tertiary-color;
   position: fixed;
   bottom: map-get($sizes, s);
   right: map-get($sizes, s);
@@ -16,10 +16,15 @@
   transform: translateY(5rem);
   transition: all .3s ease;
   cursor: pointer;
+  z-index: 2;
+  &:hover {
+    background: darken($tertiary-color, 6%);
+  }
   &.visible {
     transform: translateY(0);
   }
   i {
     font-size: map-get($sizes, l);
+    color: $white-color;
   }
 }

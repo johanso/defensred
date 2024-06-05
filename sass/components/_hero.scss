@@ -1,0 +1,140 @@
+@use '../abstracts/mixins' as *;
+@use '../abstracts/variables' as *;
+@use '../abstracts/functions' as *;
+
+.hero {
+  background: url(./assets/banner-bg.jpg) no-repeat top left;
+  background-size: cover;
+  background-position: top left;
+  background-attachment: fixed;
+  height: 100vh;
+
+  @include mq(lg) {
+    background-position: top right;
+    height: 78vh;
+  }
+
+  &::after {
+    content: '';
+    background: $secondary-color;
+    height: inherit;
+    width: 100%;
+    left: 0;
+    overflow: auto;
+    display: block;
+    top: 0;
+    position: absolute;
+    z-index: 0;
+    filter: brightness(0.5);
+    opacity: 0.26;
+  }
+
+  &__container {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    max-width: 100%;
+    @include mq(lg) {
+      max-width: map-get($media-queries, lg);
+      margin-left: auto;
+      margin-right: auto;
+      justify-content: flex-start;
+    }
+    @include mq(xl) {
+      max-width: map-get($media-queries, xl);
+    }
+  }
+
+  &__content {
+    position: relative;
+    z-index: 1;
+    @include mq(xl) {
+      width: 30vw;
+    }
+    @include mq(xxl) {
+      width: 30vw;
+    }
+  }
+
+  &__title {
+    color: $white-color;
+    font-size: 1.75rem;
+    text-align: center;
+    line-height: 1.25;
+    letter-spacing: 1px;
+    @include mq(lg) {
+      text-align: left;
+      font-size: 1.85rem;
+    }
+    span {
+      font-size: 2.25rem;
+      background: -webkit-linear-gradient(270deg, $white-color 30%, $primary-color 90%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      @include mq(lg) {
+        font-size: 3.25rem;
+        letter-spacing: 2px;
+      }
+    }
+  }
+
+  &__text {
+    text-align: center;
+    color: $white-color;
+    margin-bottom: 2.5rem;
+    @include mq(lg) {
+      text-align: left;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    @include mq(lg) {
+      justify-content: flex-start;
+    }
+  }
+
+  &__icon {
+    border: 0;
+    bottom: 0;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    .mouse {
+      width: 2.5rem;
+      height: 4.5rem;
+      border: 1px solid $border-color;
+      border-radius: 60px;
+      position: relative;
+      &::before {
+        content: '';
+        width: 8px;
+        height: 8px;
+        position: absolute;
+        top: .75rem;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: $border-color;
+        border-radius: 50%;
+        opacity: 1;
+        animation: wheel 2s infinite;
+      }
+    }
+
+    @include mq(lg) {
+      display: none;
+    }
+  }
+}
+
+@keyframes wheel {
+	to {
+		opacity: 0;
+		top: 2.5rem;
+	}
+}

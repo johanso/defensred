@@ -2,6 +2,7 @@
 
   // includes
   require get_template_directory() . '/includes/shortcodes.php';
+  require get_template_directory() . '/includes/querypost.php';
 
   // add scripts and styles
   function travels_styles() {
@@ -47,12 +48,45 @@
         'after_title' => '</h3>'
       )
     );
+
+    register_sidebar(
+      array(
+        'name' => 'Sidebar page',
+        'id' => 'sidebar-page',
+        'description' => 'Standard Sidebar',
+        'before_widget' => '<section id="%1$s" class="sidebar__widget %2$s">',
+        'after_widget' => '</section>',
+        'before_title' => '<h3 class="widget-title">',
+        'after_title' => '</h3>'
+      )
+    );
   }
   add_action('widgets_init', 'travels_widgets');
+  
+  //Limitar con la funcion get_the_excerpt
+function excerpt($limit) {
+  $excerpt = explode(' ', get_the_excerpt(), $limit);
+  if (count($excerpt)>=$limit) {
+  array_pop($excerpt);
+  $excerpt = implode(" ",$excerpt).'...';
+  } else {
+  $excerpt = implode(" ",$excerpt);
+  }
+  $excerpt = preg_replace('`[[^]]*]`','',$excerpt);
+  return $excerpt;
+}
 
-  add_action('wpra_lite_custom_display', function() {
-    $options = WP_Reactions\Lite\Config::$current_options;
-    $reactions = WP_Reactions\Lite\Shortcode::build($options);
-    $reactions = str_replace(["\r", "\n", "\r\n"], '', $reactions);
-    echo $reactions;
-  });
+//Limitar con la funcion get_the_content
+function content($limit) {
+  $content = explode(' ', get_the_content(), $limit);
+  if (count($content)>=$limit) {
+  array_pop($content);
+  $content = implode(" ",$content).'...';
+  } else {
+  $content = implode(" ",$content);
+  }
+  $content = preg_replace('/[.+]/','', $content);
+  $content = apply_filters('the_content', $content);
+  $content = str_replace(']]>', ']]&gt;', $content);
+  return $content;
+}

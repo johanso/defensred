@@ -1,0 +1,50 @@
+@use '../abstracts/mixins' as *;
+@use '../abstracts/variables' as *;
+@use '../abstracts/functions' as *;
+
+.logo {
+  position: relative;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  gap: .25rem;
+  z-index: 1;
+  @include mq(lg) {
+    font-size: 1.2rem;
+  }
+  &:hover {
+    span:after {
+      background: rgba(0, 0, 0, 0.7);
+    }
+  }
+  a {
+    text-decoration: none;
+    color: $white-color;
+  }
+  img {
+    width: 2rem;
+    filter: invert(1);
+  }
+  &__span {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+  }
+
+  .flag {
+    margin-left: .5rem;
+    height: inherit;
+    line-height: 0;
+    img {
+      filter: none;
+    }
+  }
+
+  &--footer {
+    font-size: 1.25rem;
+    img {
+      width: 2.25rem;
+    }
+  }
+
+}

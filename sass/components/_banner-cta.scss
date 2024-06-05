@@ -1,0 +1,79 @@
+@use '../abstracts/mixins' as *;
+@use '../abstracts/variables' as *;
+@use '../abstracts/functions' as *;
+
+.banner-cta {
+  background-color: transparent;
+  background-image: linear-gradient(180deg, $primary-color 0%, #0C0227 100%);
+  padding: 2rem 0;
+  position: relative;
+  height: auto;
+  margin-bottom: 2rem;
+  &::before {
+    content: "";
+    background-image: url(./assets/world-map-min.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto;
+    height: 100%;
+    width: 100%;
+    display: block;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    mix-blend-mode: overlay;
+    opacity: .75;
+  }
+
+  &--last {
+    margin-bottom: 0;
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    @include mq(lg) {
+      flex-direction: row;
+      justify-content: center;
+      gap: 4rem;
+    }
+
+    &-img {
+      height: 20rem;
+      z-index: 1;
+      background: rgba(155, 155, 155, 0.3);
+      border-radius: 50%;
+      order: 1;
+      @include mq(lg) {
+        order: 0;
+      }
+      img {
+        height: 100%;
+        width: auto;
+      }
+    }
+    
+    &-texts {
+      order: 0;
+      color: $white-color;
+      margin-bottom: 2rem;
+      text-align: center;
+      z-index: 1;
+      @include mq(lg) {
+        text-align: left;
+        margin: 0;
+      }
+    }
+    
+    &-title {
+      margin-bottom: 1rem;
+      span {
+        color: $tertiary-color;
+      }
+    }
+  }
+}
+
+

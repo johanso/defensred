@@ -15,8 +15,8 @@ $font-weight-bold: 700;
   --rhythm: 22px;
 
   --font-family-title: "Cairo", sans-serif;
+  --font-family-alternate: "Oswald", sans-serif;
   --font-family: "Inter", sans-serif;
-  --font-logo: "Aclonica", sans-serif;
   --font-icons: "jzmoz";
 
   @include mq(md) {

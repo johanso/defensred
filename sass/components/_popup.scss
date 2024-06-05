@@ -1,0 +1,62 @@
+@use '../abstracts/mixins' as *;
+@use '../abstracts/variables' as *;
+@use '../abstracts/functions' as *;
+
+.popup {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  visibility: hidden;
+  opacity: 0;
+  transition: all .2s ease-in;
+
+  &__inner {
+    background-color: $white-color;
+    width: calc(100vw - 4rem);
+    position: absolute;
+    padding: 2rem;
+    height: calc(60vh - 4rem);
+    bottom: -64vh;
+    border-radius: .75rem .75rem 0 0;
+    transition: all .2s ease-in;
+
+    @include mq(lg) {
+      width: 32rem;
+      height: calc(100vh - 4rem);
+      bottom: 0;
+      border-radius: 0;
+      right: -32rem;
+    }
+  }
+
+  &__close {
+    position: absolute;
+    top: .5rem;
+    right: .5rem;
+    cursor: pointer;
+    width: 1.5rem;
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 1;
+  }
+
+  &.open {
+    visibility: visible;
+    opacity: 1;
+    [class*="popup__inner"] {
+      bottom: 0;
+      @include mq(lg) {
+        right: 0;
+      }
+    }
+  }
+
+  &__overlay {
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    width: 100%;
+  }
+}

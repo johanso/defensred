@@ -1,86 +1,32 @@
 document.addEventListener('DOMContentLoaded', () => {
   initPageFunctionalities();
   window.addEventListener("scroll", handleScroll);
+  faqAccordion()
+  loadFormContact()
 });
 
 const initPageFunctionalities = () => {
   const menuToggle = document.querySelector('#menu-icon');
   const menuTop = document.querySelector('#menu-top');
-  const mediaQuery = window.matchMedia('(max-width: 768px)');
-  const body = document.querySelector('body');
-  const sidebarFloat = document.querySelector('#sidebar-float');
-  const sidebarWidget = document.querySelector('.sidebar__widget');
-  const backdrop = document.querySelector('.backdrop');
-  const accordionTitles = document.querySelectorAll('.sidebar__widget .menu > .menu-item');
+  const mediaQuery = window.matchMedia('(max-width: 720px)');
   const goTop = document.querySelector(".goto-top");
+  const header = document.querySelector(".header");
 
   // Menu Responsive
   menuToggle.addEventListener('click', () => {
     menuToggle.classList.toggle('active');
     menuTop.classList.toggle('active');
+    header.classList.toggle('opened');
   });
 
   window.addEventListener('resize', () => {
     if(!mediaQuery.matches) {
       menuToggle.classList.remove('active');
       menuTop.classList.remove('active');
+      header.classList.remove('opened');
     }
   });
 
-  // Sidebar Responsive
-  if ( sidebarFloat && sidebarWidget && mediaQuery.matches ) {
-    sidebarFloat.addEventListener('click', () => {
-      sidebarWidget.classList.toggle('active');
-      sidebarFloat.classList.toggle('active');
-      body.classList.toggle('no-scroll');
-      backdrop.classList.toggle('active');
-      menuToggle.classList.toggle('hide');
-    });
-
-    backdrop.addEventListener('click', () => {
-      sidebarWidget.classList.remove('active');
-      sidebarFloat.classList.remove('active');
-      body.classList.remove('no-scroll');
-      backdrop.classList.remove('active');
-      menuToggle.classList.remove('hide');
-    });
-  }
-
-  // Accordion Sidebar
-  accordionTitles.forEach(title => {
-    const itemActive = title.querySelector('.sub-menu .current-menu-item');
-    if (itemActive) {
-      title.classList.add('active');
-      const subMenu = title.querySelector('.sub-menu');
-      subMenu.style.maxHeight = subMenu.scrollHeight + "px";
-    }
-  })
-
-  accordionTitles.forEach(title => {
-    title.addEventListener('click', () => {
-      title.classList.toggle('active');
-
-      const subMenu = title.querySelector('.sub-menu');
-      if (subMenu) {
-        if (title.classList.contains('active')) {
-          subMenu.style.maxHeight = subMenu.scrollHeight + "px";
-        } else {
-          subMenu.style.maxHeight = null;
-        }
-      }
-
-      accordionTitles.forEach(item => {
-        if (item !== title && item.classList.contains('active')) {
-          item.classList.remove('active');
-          const otherSubMenu = item.querySelector('.sub-menu');
-          if (otherSubMenu) {
-            otherSubMenu.style.maxHeight = null;
-          }
-        }
-      });
-    });
-  });
-  
   // Go to top
   goTop.addEventListener("click", () => {
     window.scroll({
@@ -94,7 +40,6 @@ const handleScroll = () => {
   let prevScrollPos = window.scrollY || window.pageYOffset;
   const header = document.querySelector(".header");
   const goTop = document.querySelector(".goto-top");
-  const sidebarFloat = document.querySelector("#sidebar-float");
 
   window.addEventListener("scroll", function() {
     const currentScrollPos = window.scrollY || window.pageYOffset;
@@ -109,12 +54,8 @@ const handleScroll = () => {
       goTop.classList.add("visible");
     }
 
-    if (sidebarFloat) {
-      if (prevScrollPos < currentScrollPos) {
-        sidebarFloat.classList.add("hidden");
-      } else {
-        sidebarFloat.classList.remove("hidden");
-      }
+    if (currentScrollPos === 0) {
+      header.classList.remove("visible");
     }
 
     prevScrollPos = currentScrollPos;
@@ -135,3 +76,50 @@ const handleScroll = () => {
     goTop.style.opacity = "1";
   }
 };
+
+const faqAccordion = () => {
+  const allDetails = document.querySelectorAll("#faq details");
+  allDetails.forEach((details) => {
+    details.addEventListener("toggle", () => {
+      if (details.open) {
+        allDetails.forEach((otherDetails) => {
+          if (otherDetails !== details) {
+            otherDetails.removeAttribute("open");
+          }
+        });
+      }
+    });
+  });
+}
+
+const loadFormContact = () => {
+  const btnAbrirPopup = document.querySelector( '.contact' );
+  const btnClosePopup = document.querySelector( '.popup__close' );
+  const body = document.querySelector( 'body' );
+  const backdrop = document.querySelector( '.popup__overlay' );
+  const popup = document.querySelector( '.popup' );
+  const header = document.querySelector(".header");
+  const menuIcon = document.querySelector('#menu-icon');
+  const menuTop = document.querySelector('#menu-top');
+  const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+
+  btnAbrirPopup.addEventListener( 'click', () => { 
+    popup.classList.add( 'open' );
+    body.classList.add( 'no-scroll' );
+    body.style.paddingRight = `${scrollbarWidth}px`;
+    menuIcon.classList.remove('active');
+    menuTop.classList.remove('active');
+    header.classList.remove('opened');
+  });
+
+  if ( btnClosePopup || backdrop ) {
+    [ btnClosePopup, backdrop].forEach( (e) => {
+      e.addEventListener( 'click', () => {
+        popup.classList.remove( 'open' );
+        body.classList.remove( 'no-scroll' );
+        body.removeAttribute( 'style' );
+        history.pushState('', document.title, window.location.pathname + window.location.search);
+      });
+    });
+  }
+}

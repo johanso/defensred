@@ -7,45 +7,94 @@
   .main-container {
     @include mq(lg) {
       display: grid;
-      grid-template-columns: 2.5fr 1fr;
-      gap: map-get($sizes, xxl);
     }
   }
 
-  &__aside {
-    display: none;
-    @include mq(lg) {
+  &__intro {
+    background-position: bottom center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 2rem 0;
+    margin-bottom: 2rem;
+    &-how {
+      color: $muted-color;
+      font-size: .9rem;
+      text-align: center;
       display: block;
-      border-left: 4px solid $text-color;
-      ul {
-        list-style-type: none;
-        position: sticky;
-        top: 5rem;
-        padding-left: 1.5rem;
+      margin-bottom: .75rem;
+    }
+
+    &-boxes {
+      display: grid;
+      align-items: center;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1rem;
+    }
+
+    &-box {
+      width: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 1rem;
+      text-align: center;
+      position: relative;
+
+      @include mq(lg) {
+        padding: 0 1rem;
       }
-      a {
-        text-decoration: none;
-        color: inherit;
-        font-size: .9rem;
-        line-height: normal;
-        display: flex;
-        gap: .25rem;
-        &:hover {
-          text-shadow: 0 0 1px $text-color;
-        }
-        &::before {
-          content: '# ';
-          font-weight: 500;
-          display: flex;
-          align-items: flex-start;
+
+      &::after {
+        @include mq(xl) {
+          content: '';
           height: 100%;
+          width: 1px;
+          background: rgba($border-color, .5);
+          position: absolute;
+          right: -.5rem;
         }
       }
-      li {
-        height: 2rem;
-        display: flex;
-        align-items: center;
+
+      &:last-child {
+        &::after {
+          display: none;
+        }
       }
+
+
+      &-title {
+        color: $text-color;
+        margin-bottom: .75rem;
+        font-size: 1.25rem;
+      }
+
+      &-text {
+        font-size: .85rem;
+        line-height: 1.5;
+      }
+
+      &-img {
+        width: 6rem;
+        height: 6rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        border: 1px solid $secondary-color;
+        background: $primary-color;
+        margin-bottom: 1rem;
+        padding: 1rem;
+        img {
+          filter: hue-rotate(407deg) saturate(.5);
+        }
+      }
+    }
+    
+    &-text {
+      font-size: .95rem;
+      text-align: center;
+      margin: 0 auto 2.5rem;
+      max-width: 36rem;
     }
   }
 }

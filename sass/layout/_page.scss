@@ -2,8 +2,72 @@
 @use '../abstracts/variables' as *;
 @use '../abstracts/functions' as *;
 
-.main-container {
-  @include responsive-container();
-  margin-top: calc(map-get($sizes, xxxl) + map-get($sizes, l));
-  margin-bottom: map-get($sizes, xl);
+
+
+.main-container.page {
+  padding-top: 5rem;
+
+  @include mq(lg) {
+    padding-top: 8rem;
+    display: grid;
+    grid-template-columns: 1fr 20rem;
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  &::after,
+  &::before {
+    content: '';
+    height: calc(3rem + 0.5rem);
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    @include mq(lg) {
+      height: 6rem;
+    }
+  }
+  &::before {
+    display: block;
+    background: url(./assets/bg-blog.jpg) no-repeat top left;
+    background-size: cover;
+    background-position: center;
+  }
+  &::after {
+    background: $primary-color;
+    filter: brightness(0.75);
+    opacity: .75;
+  }
+
+  &.service {
+    padding-top: 1.5rem;
+
+    &::after,
+    &::before {
+      content: '';
+      height: 10.5rem;
+    }
+  }
+}
+
+.page-template-service {
+  .post__header {
+    @include responsive-container();
+    position: relative;
+    z-index: 1;
+    height: 10.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+  }
+
+  .post__title {
+    color: $white-color;
+    margin: 1rem 0 0;
+    font-size: 1.4rem;
+    @include mq(lg) {
+      font-size: 1.8rem;
+    }
+  }
 }

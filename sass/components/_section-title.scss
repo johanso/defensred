@@ -1,0 +1,14 @@
+@use '../abstracts/mixins' as *;
+@use '../abstracts/variables' as *;
+@use '../abstracts/functions' as *;
+
+.section-title {
+  font-family: var(--font-family-alternate);
+  text-align: center;
+  margin-bottom: 1rem;
+  color: $text-color;
+  text-transform: uppercase;
+  span {
+    color: $tertiary-color;
+  }
+}

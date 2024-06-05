@@ -1,0 +1,63 @@
+@use '../abstracts/mixins' as *;
+@use '../abstracts/variables' as *;
+@use '../abstracts/functions' as *;
+
+.faq {
+  background: url(./assets/hex-pattern.svg) no-repeat center left;
+  padding: 2rem 0;
+  margin-bottom: 2rem;
+  position: relative;
+
+  &__content {
+    display: grid;
+    @include mq(lg) {
+      gap: 1rem;
+    }
+
+    &-text {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    &-boxes {
+      @include mq(lg) {
+        max-width: 70%;
+        margin: auto;
+      }
+    }
+    
+    .faq-box {
+      background: $white-color;
+      border-bottom: 1px solid $border-color;
+      height: auto;
+      &[open] summary {
+        background: $secondary-color;
+        color: $white-color;
+      }
+    }
+
+    .faq-header {
+      padding: 1rem;
+      font-weight: 600;
+      background-color: transparent;
+      user-select: none;
+      cursor: pointer;
+    }
+
+    .faq-content {
+      padding: 1rem 2rem;
+      font-size: .98rem;
+      p {
+        margin: 0;
+        line-height: 1.5;
+      }
+    }
+  }
+
+  &__info {
+    @include mq(lg) {
+      
+    }
+  }
+
+}

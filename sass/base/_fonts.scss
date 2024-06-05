@@ -77,12 +77,52 @@
   src: url(fonts/inter/Inter-Bold.ttf) format('truetype');
 }
 
-/* latin - font-family: 'Inter', sans-serif; */
+/* latin */
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 200;
+  font-display: swap;
+  src: url(fonts/Oswald/Oswald-ExtraLight.ttf) format('woff2');
+}
 
 @font-face {
-  font-family: 'Aclonica';
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(fonts/Oswald/Oswald-Light.ttf) format('woff2');
+}
+
+
+@font-face {
+  font-family: 'Oswald';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url(fonts/aclonica/Aclonica-Regular.ttf) format('truetype');
+  src: url(fonts/Oswald/Oswald-Regular.ttf) format('woff2');
+}
+
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(fonts/Oswald/Oswald-Medium.ttf) format('woff2');
+}
+
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(fonts/Oswald/Oswald-SemiBold.ttf) format('woff2');
+}
+
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(fonts/Oswald/Oswald-Bold.ttf) format('woff2');
 }
