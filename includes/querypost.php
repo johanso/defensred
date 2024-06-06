@@ -60,7 +60,7 @@ function render_banner_cta($title = '¿Tu Empresa Está Segura?', $text = 'No de
               <div class="banner-cta__content-texts">
                   <h2 class="banner-cta__content-title"><?php echo wp_kses_post($title); ?></h2>
                   <p class="banner-cta__content-text"><?php echo wp_kses_post($text); ?></p>
-                  <a class="button button--cta-outline button--icon" href="#"><?php esc_html_e('Solicita una Consulta Gratuita', 'your-text-domain'); ?></a>
+                  <a class="button button--cta-outline button--icon contact" href="#contacto"><?php esc_html_e('Solicita una Consulta Gratuita', 'your-text-domain'); ?></a>
               </div>
           </div>
       </div>

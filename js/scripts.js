@@ -93,9 +93,9 @@ const faqAccordion = () => {
 }
 
 const loadFormContact = () => {
-  const btnAbrirPopup = document.querySelector( '.contact' );
+  const btnAbrirPopup = document.querySelectorAll( '.contact' );
   const btnClosePopup = document.querySelector( '.popup__close' );
-  const body = document.querySelector( 'body' );
+  const body = document.body;
   const backdrop = document.querySelector( '.popup__overlay' );
   const popup = document.querySelector( '.popup' );
   const header = document.querySelector(".header");
@@ -103,13 +103,15 @@ const loadFormContact = () => {
   const menuTop = document.querySelector('#menu-top');
   const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
 
-  btnAbrirPopup.addEventListener( 'click', () => { 
-    popup.classList.add( 'open' );
-    body.classList.add( 'no-scroll' );
-    body.style.paddingRight = `${scrollbarWidth}px`;
-    menuIcon.classList.remove('active');
-    menuTop.classList.remove('active');
-    header.classList.remove('opened');
+  btnAbrirPopup.forEach(button => {
+    button.addEventListener('click', () => {
+      popup.classList.add('open');
+      body.classList.add('no-scroll');
+      body.style.paddingRight = `${scrollbarWidth}px`;
+      menuIcon.classList.remove('active');
+      menuTop.classList.remove('active');
+      header.classList.remove('opened');
+    });
   });
 
   if ( btnClosePopup || backdrop ) {
