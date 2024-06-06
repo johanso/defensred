@@ -6,11 +6,11 @@
   background: url(./assets/banner-bg.jpg) no-repeat top left;
   background-size: cover;
   background-position: top left;
-  background-attachment: fixed;
   height: 100vh;
-
+  
   @include mq(lg) {
     background-position: top right;
+    background-attachment: fixed;
     height: 78vh;
   }
 

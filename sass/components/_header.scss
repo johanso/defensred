@@ -34,7 +34,7 @@
       background: $text-color;
     }
     [class*="logo"] img {
-      filter: none;
+      filter: none !important;
       @include mq(lg) {
       }
     }
