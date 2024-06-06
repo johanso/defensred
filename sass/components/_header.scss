@@ -34,7 +34,7 @@
       background: $text-color;
     }
     [class*="logo"] img {
-      filter: none !important;
+      filter: none;
       @include mq(lg) {
       }
     }
@@ -50,6 +50,9 @@
     }
     &.visible [class*=logo] img {
       filter: invert(1);
+    }
+    &.visible .flag img {
+      filter: none;
     }
   }
 
