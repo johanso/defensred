@@ -18,7 +18,7 @@
     width: calc(100vw - 2rem);
     position: absolute;
     padding: 1rem;
-    height: calc(99vh - 4rem);
+    height: calc(99vh - 6rem);
     bottom: -64vh;
     border-radius: .75rem .75rem 0 0;
     transition: all .2s ease-in;
@@ -35,7 +35,7 @@
   &__content {
     overflow: scroll;
     height: 100%;
-    padding: 1rem;
+    padding: .75rem;
   }
 
   &__close {
