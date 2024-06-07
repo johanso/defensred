@@ -67,11 +67,20 @@
 
 .input-container input,
 .input-container textarea {
-  width: 100%;
+  width: calc(100% - 2rem);
   border: 1px solid rgb(0 0 0 / 50%);
   height: 2.5rem;
   border-radius: .25rem;
   padding: 0 1rem;
+}
+
+.input-container input[type="submit"] {
+  height: 3rem;
+  font-size: 1rem;
+  width: 100%;
+  cursor: pointer;
+  border-radius: 25rem;
+  border: none;
 }
 
 .input-container input.wpcf7-not-valid {
@@ -86,7 +95,6 @@
 .input-container label {
   margin-bottom: .5rem;
   display: block;
-  font-family: var(--font-secondary);
   font-weight: 600;
   font-size: .9rem;
 }
@@ -97,7 +105,7 @@
 
 .input-container input::placeholder,
 .input-container textarea::placeholder {
-  font-size: .75rem;
+  font-size: .8rem;
   color: var(--gray);
   opacity: 1;
 }
