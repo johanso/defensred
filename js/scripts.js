@@ -103,18 +103,21 @@ const loadFormContact = () => {
   const menuTop = document.querySelector('#menu-top');
   const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
 
+  const openPopup = () => {
+    popup.classList.add('open');
+    body.classList.add('no-scroll');
+    body.style.paddingRight = `${scrollbarWidth}px`;
+    menuIcon.classList.remove('active');
+    menuTop.classList.remove('active');
+    header.classList.remove('opened');
+  };
+
   btnAbrirPopup.forEach(button => {
-    button.addEventListener('click', () => {
-      popup.classList.add('open');
-      body.classList.add('no-scroll');
-      body.style.paddingRight = `${scrollbarWidth}px`;
-      menuIcon.classList.remove('active');
-      menuTop.classList.remove('active');
-      header.classList.remove('opened');
-    });
+    button.addEventListener('click', openPopup);
   });
 
-  if ( btnClosePopup || backdrop ) {
+
+  if ( btnClosePopup && backdrop ) {
     [ btnClosePopup, backdrop].forEach( (e) => {
       e.addEventListener( 'click', () => {
         popup.classList.remove( 'open' );
@@ -124,4 +127,9 @@ const loadFormContact = () => {
       });
     });
   }
+
+  if (window.location.hash === '#contacto') {
+    openPopup();
+  }
+  
 }
