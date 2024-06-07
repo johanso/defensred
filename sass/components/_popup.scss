@@ -15,10 +15,10 @@
 
   &__inner {
     background-color: $white-color;
-    width: calc(100vw - 4rem);
+    width: calc(100vw - 2rem);
     position: absolute;
-    padding: 2rem;
-    height: calc(60vh - 4rem);
+    padding: 1rem;
+    height: calc(99vh - 4rem);
     bottom: -64vh;
     border-radius: .75rem .75rem 0 0;
     transition: all .2s ease-in;
@@ -30,6 +30,12 @@
       border-radius: 0;
       right: -32rem;
     }
+  }
+
+  &__content {
+    overflow: scroll;
+    height: 100%;
+    padding: 1rem;
   }
 
   &__close {
