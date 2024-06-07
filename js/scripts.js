@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener("scroll", handleScroll);
   faqAccordion()
   loadFormContact()
+  contactFormSelect()
 });
 
 const initPageFunctionalities = () => {
@@ -131,5 +132,16 @@ const loadFormContact = () => {
   if (window.location.hash === '#contacto') {
     openPopup();
   }
-  
+
+}
+
+const contactFormSelect = () => {
+  const selects = document.querySelectorAll('.wpcf7-select');
+
+  selects.forEach(select => {
+    const firstOption = select.querySelector('option:first-child');
+    if (firstOption && firstOption.value === '') {
+      firstOption.disabled = true;
+    }
+  });
 }
