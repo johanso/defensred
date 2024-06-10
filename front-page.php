@@ -113,7 +113,7 @@
               </a>
             </div>
 
-            <div class="services__content-box">
+            <!-- <div class="services__content-box">
               <a href="/seguridad-sincronizada/">
                 <div class="services__content-box-img">
                   <img src="<?php echo get_template_directory_uri(); ?>/assets/n7.png" alt="logo ciberseguridad">
@@ -121,7 +121,7 @@
                 <h3 class="services__content-box-title">Seguridad Sincronizada</h3>
                 <p class="services__content-box-text">Integración de soluciones para una protección coherente y eficaz.</p> 
               </a>
-            </div>
+            </div> -->
 
             <div class="services__content-box">
               <a href="/proteccion-de-datos/">
@@ -143,7 +143,7 @@
               </a>
             </div>
 
-            <div class="services__content-box">
+            <!-- <div class="services__content-box">
               <a href="/prevencion-de-intrusiones/">
                 <div class="services__content-box-img">
                   <img src="<?php echo get_template_directory_uri(); ?>/assets/h1.png" alt="logo ciberseguridad">
@@ -151,7 +151,7 @@
                 <h3 class="services__content-box-title">Prevención de Intrusiones</h3>
                 <p class="services__content-box-text">Evita intrusiones con nuestras avanzadas técnicas de seguridad.</p> 
               </a>
-            </div>
+            </div> -->
 
             <div class="services__content-box">
               <a href="/seguridad-de-correo-electronico/">
@@ -183,7 +183,7 @@
               </a>
             </div>
 
-            <div class="services__content-box">
+            <!-- <div class="services__content-box">
               <a href="/seguridad-de-redes-wi-fi/">
                 <div class="services__content-box-img">
                   <img src="<?php echo get_template_directory_uri(); ?>/assets/s4.png" alt="logo ciberseguridad">
@@ -191,9 +191,9 @@
                 <h3 class="services__content-box-title">Seguridad de Redes Wi-Fi</h3>
                 <p class="services__content-box-text">Asegura tus redes Wi-Fi contra accesos no autorizados.</p> 
               </a>
-            </div>
+            </div> -->
 
-            <div class="services__content-box">
+            <!-- <div class="services__content-box">
               <a href="/seguridad-de-endpoints-moviles/">
                 <div class="services__content-box-img">
                   <img src="<?php echo get_template_directory_uri(); ?>/assets/conexion-segura.png" alt="logo ciberseguridad">
@@ -201,7 +201,7 @@
                 <h3 class="services__content-box-title">Seguridad de Endpoints Móviles</h3>
                 <p class="services__content-box-text">Extiende la seguridad de endpoints a todos tus dispositivos móviles.</p> 
               </a>
-            </div>
+            </div> -->
 
             <div class="services__content-box">
               <a href="/seguridad-de-acceso-remoto/">
