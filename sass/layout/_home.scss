@@ -16,9 +16,10 @@
     background-repeat: no-repeat;
     padding: 2rem 0;
     margin-bottom: 2rem;
+    
     &-how {
       color: $muted-color;
-      font-size: .9rem;
+      font-size: .96rem;
       text-align: center;
       display: block;
       margin-bottom: .75rem;
@@ -69,7 +70,7 @@
       }
 
       &-text {
-        font-size: .85rem;
+        font-size: .9rem;
         line-height: 1.5;
       }
 
@@ -91,7 +92,7 @@
     }
     
     &-text {
-      font-size: .95rem;
+      font-size: .98rem;
       text-align: center;
       margin: 0 auto 2.5rem;
       max-width: 36rem;
