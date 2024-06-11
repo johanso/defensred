@@ -94,7 +94,7 @@
             </div>
 
             <div class="services__content-box">
-              <a href="/seguridad-en-la-nube/">
+              <a href="/seguridad-de-red/">
                 <div class="services__content-box-img">
                   <img src="<?php echo get_template_directory_uri(); ?>/assets/s2.png" alt="logo ciberseguridad">
                 </div>
