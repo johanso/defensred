@@ -123,7 +123,7 @@
               </a>
             </div> -->
 
-            <div class="services__content-box">
+            <!-- <div class="services__content-box">
               <a href="/proteccion-de-datos/">
                 <div class="services__content-box-img">
                   <img src="<?php echo get_template_directory_uri(); ?>/assets/s1.png" alt="logo ciberseguridad">
@@ -131,7 +131,7 @@
                 <h3 class="services__content-box-title">Protección de Datos</h3>
                 <p class="services__content-box-text">Salvaguarda tus datos sensibles con nuestras soluciones de protección de datos.</p> 
               </a>
-            </div>
+            </div> -->
 
             <div class="services__content-box">
               <a href="/seguridad-en-la-nube/">
@@ -183,7 +183,7 @@
               </a>
             </div>
 
-            <!-- <div class="services__content-box">
+            <div class="services__content-box">
               <a href="/seguridad-de-redes-wi-fi/">
                 <div class="services__content-box-img">
                   <img src="<?php echo get_template_directory_uri(); ?>/assets/s4.png" alt="logo ciberseguridad">
@@ -191,7 +191,7 @@
                 <h3 class="services__content-box-title">Seguridad de Redes Wi-Fi</h3>
                 <p class="services__content-box-text">Asegura tus redes Wi-Fi contra accesos no autorizados.</p> 
               </a>
-            </div> -->
+            </div>
 
             <!-- <div class="services__content-box">
               <a href="/seguridad-de-endpoints-moviles/">
