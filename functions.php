@@ -100,7 +100,7 @@ add_action( 'init', 'Redpishi_Preloader' );
 function Redpishi_Preloader() { if(!is_admin() &&  $GLOBALS["pagenow"] !== "wp-login.php" ) { 
 	
 $delay = 0.25;	//seconds
-$loader = 'http://defendet.local/wp-content/themes/mytheme/assets/logo.svg';
+$loader = 'https://defensred.com/wp-content/themes/mytheme/assets/logo.svg';
 	
 echo '<div class="preloader"><img src="'.$loader.'" alt="Preloader"><div class="preloader-loader"></div></div>
  <style>
