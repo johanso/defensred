@@ -48,6 +48,7 @@
 @use 'layout/_page';
 @use 'layout/_post';
 @use 'layout/_blog';
+@use 'layout/_page404';
 
 @use './abstracts/mixins' as *;
 @use './abstracts/variables' as *;
