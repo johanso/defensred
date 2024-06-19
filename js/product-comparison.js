@@ -24,27 +24,29 @@ document.addEventListener('DOMContentLoaded', function() {
 
           // Crear la tabla de comparación usando los campos de ACF
           comparisonTable.innerHTML = `
-            <table>
-              <thead>
-                <tr>
-                  <th>Característica</th>
-                  <th>${product1.title.rendered}</th>
-                  <th>${product2.title.rendered}</th>
-                </tr>
-              </thead>
+            <div class="table-responsive">
+              <table class="table table-striped">
+                <thead class="border-light">
+                  <tr>
+                    <th scope="col"></th>
+                    <th scope="col">${product1.title.rendered}</th>
+                    <th scope="col">${product2.title.rendered}</th>
+                  </tr>
+                </thead>
                 <tbody>
                   <tr>
-                    <td>Precio</td>
+                    <th scope="row">Precio</th>
                     <td>${product1.acf.marca}</td>
                     <td>${product2.acf.marca}</td>
                   </tr>
                   <tr>
-                    <td>Descripción</td>
-                    <td>${product1.acf.caracteristica_1}</td>
+                    <th scope="row">Descripción</td>
+                    <td>${product1.acf.caracteristica_1}</th>
                     <td>${product2.acf.caracteristica_2}</td>
                   </tr>
                 </tbody>
-            </table>
+              </table>
+            </div>
           `;
         } catch (error) {
           console.error('Error fetching product details:', error);
