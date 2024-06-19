@@ -4,8 +4,8 @@
 
 .table {
   width: 100%;
-  border-collapse: separate;
-  border-spacing: .25rem;
+  border-collapse: collapse;
+  border-spacing: 0;
   margin-bottom: 2rem;
   font-size: 0.875rem;
   color: $text-color;
