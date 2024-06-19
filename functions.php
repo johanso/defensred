@@ -92,3 +92,16 @@ function content($limit) {
 }
 
 add_filter( 'big_image_size_threshold', '__return_false' );
+
+
+function expose_acf_fields_in_rest($response, $post, $request) {
+  if (function_exists('get_fields')) {
+      $acf_fields = get_fields($post->ID);
+      if ($acf_fields) {
+          $response->data['acf'] = $acf_fields;
+      }
+  }
+  return $response;
+}
+
+add_filter('rest_prepare_producto', 'expose_acf_fields_in_rest', 10, 3);
