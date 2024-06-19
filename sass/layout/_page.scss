@@ -87,6 +87,16 @@
 .page {
   &__comparison {
     margin: 0 auto;
-    max-width: 728px;
+    width: 728px;
+
+    .comparison-table {
+      padding: 1rem;
+      background: rgb(249 249 249);
+    }
+
+    .table {
+      margin-bottom: 0;
+    }
   }
+
 }

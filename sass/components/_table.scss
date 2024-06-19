@@ -24,33 +24,23 @@
   }
 
   &-striped > tbody > tr:nth-of-type(odd) > * {
-    background-color: rgba(0, 0, 0, 0.02);
+    background-color: rgb(249 249 249);
   }
 
   & > :not(caption) > * > * {
-    padding: .75rem 1.25rem;
+    padding: .75rem 1rem;
   }
 
   th[scope="row"] {
     text-align: left;
   }
 
-  th[scope="col"] {
-    background: $secondary-color;
-    color: $white-color;
-    font-size: 1rem;
-  }
-
-  th[scope="col"]:empty {
-    background: none;
-  }
-
   td, th {
-    border-radius: .25rem;
+    text-align: left;
   }
 
   & > :not(caption) > * > * {
-    background-color: white
+    background-color: $white-color;
   }
 
 }
