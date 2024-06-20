@@ -32,9 +32,9 @@ document.addEventListener('DOMContentLoaded', function() {
               <table class="table table-striped">
                 <thead class="border-light">
                   <tr>
-                    <th scope="col"></th>
-                    <th scope="col">${product1.title.rendered}</th>
-                    <th scope="col">${product2.title.rendered}</th>
+                    <th scope="col" width="30%"></th>
+                    <th scope="col" width="35%">${product1.title.rendered}</th>
+                    <th scope="col" width="35%">${product2.title.rendered}</th>
                   </tr>
                 </thead>
                 <tbody>
