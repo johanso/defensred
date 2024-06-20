@@ -45,4 +45,17 @@
     background-color: $white-color;
   }
 
+  .th-separator {
+    background: $secondary-color !important;
+    color: $white-color;
+    padding: 1rem;
+    font-size: 1rem;
+    letter-spacing: 1px;
+  }
+
+  .tr-separator {
+    border-top: 1rem solid #f9f9f9;
+    border-bottom: 1rem solid #f9f9f9;
+  }
+
 }

@@ -32,12 +32,15 @@ document.addEventListener('DOMContentLoaded', function() {
               <table class="table table-striped">
                 <thead class="border-light">
                   <tr>
-                    <th scope="col">Model</th>
+                    <th scope="col"></th>
                     <th scope="col">${product1.title.rendered}</th>
                     <th scope="col">${product2.title.rendered}</th>
                   </tr>
                 </thead>
                 <tbody>
+                <tr class="tr-separator">
+                  <th colspan="3" class="th-separator">Performance</th>
+                </tr>
                   <tr>
                     <th scope="row">Firewall throughput</td>
                     <td>${product1.acf.firewall_throughput || 'N/A'}</th>
@@ -103,6 +106,9 @@ document.addEventListener('DOMContentLoaded', function() {
                     <td>${product1.acf.xstream_ssltls_concurrent_connections || 'N/A'}</th>
                     <td>${product2.acf.xstream_ssltls_concurrent_connections || 'N/A'}</td>
                   </tr>
+                  <tr class="tr-separator">
+                    <th colspan="3" class="th-separator">Wireless Specification</th>
+                  </tr>
                   <tr>
                     <th scope="row">No. of antennas</td>
                     <td>${product1.acf.no_of_antennas || 'N/A'}</th>
@@ -117,6 +123,9 @@ document.addEventListener('DOMContentLoaded', function() {
                     <th scope="row">Wireless interface</td>
                     <td>${product1.acf.wireless_interface || 'N/A'}</th>
                     <td>${product2.acf.wireless_interface || 'N/A'}</td>
+                  </tr>
+                  <tr class="tr-separator">
+                    <th colspan="3" class="th-separator">Physical Interfaces</th>
                   </tr>
                   <tr>
                     <th scope="row">Storage</td>
@@ -148,13 +157,16 @@ document.addEventListener('DOMContentLoaded', function() {
                     <td>${product1.acf.optional_on_connectivity || 'N/A'}</th>
                     <td>${product2.acf.optional_on_connectivity || 'N/A'}</td>
                   </tr>
+                  <tr class="tr-separator">
+                    <th colspan="3" class="th-separator">Physical Specifications</th>
+                  </tr>
                   <tr>
                     <th scope="row">Mounting</td>
                     <td>${product1.acf.mounting || 'N/A'}</th>
                     <td>${product2.acf.mounting || 'N/A'}</td>
                   </tr>
                   <tr>
-                    <th scope="row">Dimensions: Width X height X depth</td>
+                    <th scope="row">Dimensions:<br/> Width X height X depth</td>
                     <td>${product1.acf.dimensions_width_x_height_x_depth || 'N/A'}</th>
                     <td>${product2.acf.dimensions_width_x_height_x_depth || 'N/A'}</td>
                   </tr>
@@ -162,6 +174,9 @@ document.addEventListener('DOMContentLoaded', function() {
                     <th scope="row">Weight</td>
                     <td>${product1.acf.weight || 'N/A'}</th>
                     <td>${product2.acf.weight || 'N/A'}</td>
+                  </tr>
+                  <tr class="tr-separator">
+                    <th colspan="3" class="th-separator">Environment</th>
                   </tr>
                   <tr>
                     <th scope="row">Power supply</td>
@@ -183,11 +198,15 @@ document.addEventListener('DOMContentLoaded', function() {
                     <td>${product1.acf.humidity || 'N/A'}</th>
                     <td>${product2.acf.humidity || 'N/A'}</td>
                   </tr>
+                  <tr class="tr-separator">
+                    <th colspan="3" class="th-separator">Product Certifications</th>
+                  </tr>
                   <tr>
                     <th scope="row">Certifications</td>
                     <td>${product1.acf.certifications || 'N/A'}</th>
                     <td>${product2.acf.certifications || 'N/A'}</td>
                   </tr>
+					      <tr>
                 </tbody>
               </table>
             </div>
