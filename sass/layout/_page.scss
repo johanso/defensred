@@ -94,6 +94,17 @@
       background: rgb(249 249 249);
     }
 
+    .comparison-form {
+      margin-bottom: 1rem;
+    }
+
+    .comparison-selects {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+
     .table {
       margin-bottom: 0;
     }
