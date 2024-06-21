@@ -77,168 +77,168 @@ document.addEventListener('DOMContentLoaded', function () {
                 </tr>
                   <tr>
                     <th scope="row">Firewall throughput</td>
-                    <td>${product1.acf.firewall_throughput || 'N/A'}</th>
-                    <td>${product2.acf.firewall_throughput || 'N/A'}</td>
+                    <td>${firewall1.acf.firewall_throughput || 'N/A'}</th>
+                    <td>${firewall2.acf.firewall_throughput || 'N/A'}</td>
                   </tr>
                   <tr>
                     <th scope="row">Firewall IMIX</td>
-                    <td>${product1.acf.firewall_imix || 'N/A'}</th>
-                    <td>${product2.acf.firewall_imix || 'N/A'}</td>
+                    <td>${firewall1.acf.firewall_imix || 'N/A'}</th>
+                    <td>${firewall2.acf.firewall_imix || 'N/A'}</td>
                   </tr>
                   <tr>
-                    <th scope="row">Firewall Latency (64 byte UDP)</td>
-                    <td>${product1.acf.firewall_latency_64_byte_udp || 'N/A'}</th>
-                    <td>${product2.acf.firewall_latency_64_byte_udp || 'N/A'}</td>
+                    <th scope="row">Firewall Latency</td>
+                    <td>${firewall1.acf.firewall_latency || 'N/A'}</th>
+                    <td>${firewall2.acf.firewall_latency || 'N/A'}</td>
                   </tr>
                   <tr>
                     <th scope="row">IPS throughput</td>
-                    <td>${product1.acf.ips_throughput || 'N/A'}</th>
-                    <td>${product2.acf.ips_throughput || 'N/A'}</td>
+                    <td>${firewall1.acf.ips_throughput || 'N/A'}</th>
+                    <td>${firewall2.acf.ips_throughput || 'N/A'}</td>
                   </tr>
                   <tr>
                     <th scope="row">Threat protection throughput</td>
-                    <td>${product1.acf.threat_protection_throughput || 'N/A'}</th>
-                    <td>${product2.acf.threat_protection_throughput || 'N/A'}</td>
+                    <td>${firewall1.acf.threat_protection_throughput || 'N/A'}</th>
+                    <td>${firewall2.acf.threat_protection_throughput || 'N/A'}</td>
                   </tr>
                   <tr>
-                    <th scope="row">NGFW</td>
-                    <td>${product1.acf.ngfw || 'N/A'}</th>
-                    <td>${product2.acf.ngfw || 'N/A'}</td>
+                    <th scope="row">NGFW Throughput</td>
+                    <td>${firewall1.acf.ngfw || 'N/A'}</th>
+                    <td>${firewall2.acf.ngfw || 'N/A'}</td>
                   </tr>
                   <tr>
                     <th scope="row">Concurrent connections</td>
-                    <td>${product1.acf.concurrent_connections || 'N/A'}</th>
-                    <td>${product2.acf.concurrent_connections || 'N/A'}</td>
+                    <td>${firewall1.acf.concurrent_connections || 'N/A'}</th>
+                    <td>${firewall2.acf.concurrent_connections || 'N/A'}</td>
                   </tr>
                   <tr>
                     <th scope="row">New connections/sec</td>
-                    <td>${product1.acf.new_connectionssec || 'N/A'}</th>
-                    <td>${product2.acf.new_connectionssec || 'N/A'}</td>
+                    <td>${firewall1.acf.new_connectionssec || 'N/A'}</th>
+                    <td>${firewall2.acf.new_connectionssec || 'N/A'}</td>
                   </tr>
                   <tr>
                     <th scope="row">IPsec VPN throughput</td>
-                    <td>${product1.acf.ipsec_vpn_throughput || 'N/A'}</th>
-                    <td>${product2.acf.ipsec_vpn_throughput || 'N/A'}</td>
+                    <td>${firewall1.acf.ipsec_vpn_throughput || 'N/A'}</th>
+                    <td>${firewall2.acf.ipsec_vpn_throughput || 'N/A'}</td>
                   </tr>
                   <tr>
                     <th scope="row">IPsec VPN concurrent tunnels</td>
-                    <td>${product1.acf.ipsec_vpn_concurrent_tunnels || 'N/A'}</th>
-                    <td>${product2.acf.ipsec_vpn_concurrent_tunnels || 'N/A'}</td>
+                    <td>${firewall1.acf.ipsec_vpn_concurrent || 'N/A'}</th>
+                    <td>${firewall2.acf.ipsec_vpn_concurrent || 'N/A'}</td>
                   </tr>
                   <tr>
                     <th scope="row">SSL VPN concurrent tunnels</td>
-                    <td>${product1.acf.ssl_vpn_concurrent_tunnels || 'N/A'}</th>
-                    <td>${product2.acf.ssl_vpn_concurrent_tunnels || 'N/A'}</td>
+                    <td>${firewall1.acf.ssl_vpn_concurrent_tunnels || 'N/A'}</th>
+                    <td>${firewall2.acf.ssl_vpn_concurrent_tunnels || 'N/A'}</td>
                   </tr>
                   <tr>
                     <th scope="row">Xstream SSL/TLS Inspection</td>
-                    <td>${product1.acf.xstream_ssltls_inspection || 'N/A'}</th>
-                    <td>${product2.acf.xstream_ssltls_inspection || 'N/A'}</td>
+                    <td>${firewall1.acf.xstream_ssltls_inspection || 'N/A'}</th>
+                    <td>${firewall2.acf.xstream_ssltls_inspection || 'N/A'}</td>
                   </tr>
                   <tr>
                     <th scope="row">Xstream SSL/TLS concurrent connections</td>
-                    <td>${product1.acf.xstream_ssltls_concurrent_connections || 'N/A'}</th>
-                    <td>${product2.acf.xstream_ssltls_concurrent_connections || 'N/A'}</td>
+                    <td>${firewall1.acf.xstream_ssltls || 'N/A'}</th>
+                    <td>${firewall2.acf.xstream_ssltls || 'N/A'}</td>
                   </tr>
                   <tr class="tr-separator">
                     <th colspan="3" class="th-separator">Wireless Specification</th>
                   </tr>
                   <tr>
-                    <th scope="row">No. of antennas</td>
-                    <td>${product1.acf.no_of_antennas || 'N/A'}</th>
-                    <td>${product2.acf.no_of_antennas || 'N/A'}</td>
+                    <th scope="row">Number of Antennas</td>
+                    <td>${firewall1.acf.no_of_antennas || 'N/A'}</th>
+                    <td>${firewall2.acf.no_of_antennas || 'N/A'}</td>
                   </tr>
                   <tr>
                     <th scope="row">MIMO capabilities</td>
-                    <td>${product1.acf.mimo_capabilities || 'N/A'}</th>
-                    <td>${product2.acf.mimo_capabilities || 'N/A'}</td>
+                    <td>${firewall1.acf.mimo_capabilities || 'N/A'}</th>
+                    <td>${firewall2.acf.mimo_capabilities || 'N/A'}</td>
                   </tr>
                   <tr>
                     <th scope="row">Wireless interface</td>
-                    <td>${product1.acf.wireless_interface || 'N/A'}</th>
-                    <td>${product2.acf.wireless_interface || 'N/A'}</td>
+                    <td>${firewall1.acf.wireless_interface || 'N/A'}</th>
+                    <td>${firewall2.acf.wireless_interface || 'N/A'}</td>
                   </tr>
                   <tr class="tr-separator">
                     <th colspan="3" class="th-separator">Physical Interfaces</th>
                   </tr>
                   <tr>
                     <th scope="row">Storage</td>
-                    <td>${product1.acf.storage || 'N/A'}</th>
-                    <td>${product2.acf.storage || 'N/A'}</td>
+                    <td>${firewall1.acf.storage || 'N/A'}</th>
+                    <td>${firewall2.acf.storage || 'N/A'}</td>
                   </tr>
                   <tr>
                     <th scope="row">Ethernet interfaces (fixed)</td>
-                    <td>${product1.acf.ethernet_interfaces_fixed || 'N/A'}</th>
-                    <td>${product2.acf.ethernet_interfaces_fixed || 'N/A'}</td>
+                    <td>${firewall1.acf.ethernet_interfaces_fixed || 'N/A'}</th>
+                    <td>${firewall2.acf.ethernet_interfaces_fixed || 'N/A'}</td>
                   </tr>
                   <tr>
                     <th scope="row">Management ports</td>
-                    <td>${product1.acf.management_ports || 'N/A'}</th>
-                    <td>${product2.acf.management_ports || 'N/A'}</td>
+                    <td>${firewall1.acf.management_ports || 'N/A'}</th>
+                    <td>${firewall2.acf.management_ports || 'N/A'}</td>
                   </tr>
                   <tr>
                     <th scope="row">Other I/O ports</td>
-                    <td>${product1.acf.other_io_ports || 'N/A'}</th>
-                    <td>${product2.acf.other_io_ports || 'N/A'}</td>
+                    <td>${firewall1.acf.other_io_ports || 'N/A'}</th>
+                    <td>${firewall2.acf.other_io_ports || 'N/A'}</td>
                   </tr>
                   <tr>
                     <th scope="row">Number of expansion slots</td>
-                    <td>${product1.acf.number_of_expansion_slots || 'N/A'}</th>
-                    <td>${product2.acf.number_of_expansion_slots || 'N/A'}</td>
+                    <td>${firewall1.acf.number_of_expansion_slots || 'N/A'}</th>
+                    <td>${firewall2.acf.number_of_expansion_slots || 'N/A'}</td>
                   </tr>
                   <tr>
                     <th scope="row">Optional add-on connectivity</td>
-                    <td>${product1.acf.optional_on_connectivity || 'N/A'}</th>
-                    <td>${product2.acf.optional_on_connectivity || 'N/A'}</td>
+                    <td>${firewall1.acf.optional_on_connectivity || 'N/A'}</th>
+                    <td>${firewall2.acf.optional_on_connectivity || 'N/A'}</td>
                   </tr>
                   <tr class="tr-separator">
                     <th colspan="3" class="th-separator">Physical Specifications</th>
                   </tr>
                   <tr>
-                    <th scope="row">Mounting</td>
-                    <td>${product1.acf.mounting || 'N/A'}</th>
-                    <td>${product2.acf.mounting || 'N/A'}</td>
+                    <th scope="row">Mounting Options</td>
+                    <td>${firewall1.acf.mounting || 'N/A'}</th>
+                    <td>${firewall2.acf.mounting || 'N/A'}</td>
                   </tr>
                   <tr>
-                    <th scope="row">Dimensions:<br/> Width X height X depth</td>
-                    <td>${product1.acf.dimensions_width_x_height_x_depth || 'N/A'}</th>
-                    <td>${product2.acf.dimensions_width_x_height_x_depth || 'N/A'}</td>
+                    <th scope="row">Dimensions (W x H x D)</td>
+                    <td>${firewall1.acf.dimensions || 'N/A'}</th>
+                    <td>${firewall2.acf.dimensions || 'N/A'}</td>
                   </tr>
                   <tr>
                     <th scope="row">Weight</td>
-                    <td>${product1.acf.weight || 'N/A'}</th>
-                    <td>${product2.acf.weight || 'N/A'}</td>
+                    <td>${firewall1.acf.weight || 'N/A'}</th>
+                    <td>${firewall2.acf.weight || 'N/A'}</td>
                   </tr>
                   <tr class="tr-separator">
                     <th colspan="3" class="th-separator">Environment</th>
                   </tr>
                   <tr>
                     <th scope="row">Power supply</td>
-                    <td>${product1.acf.power_supply || 'N/A'}</th>
-                    <td>${product2.acf.power_supply || 'N/A'}</td>
+                    <td>${firewall1.acf.power_supply || 'N/A'}</th>
+                    <td>${firewall2.acf.power_supply || 'N/A'}</td>
                   </tr>
                   <tr>
                     <th scope="row">Power consumption</td>
-                    <td>${product1.acf.power_consumption || 'N/A'}</th>
-                    <td>${product2.acf.power_consumption || 'N/A'}</td>
+                    <td>${firewall1.acf.power_consumption || 'N/A'}</th>
+                    <td>${firewall2.acf.power_consumption || 'N/A'}</td>
                   </tr>
                   <tr>
                     <th scope="row">Operating temperature</td>
-                    <td>${product1.acf.operating_temperature || 'N/A'}</th>
-                    <td>${product2.acf.operating_temperature || 'N/A'}</td>
+                    <td>${firewall1.acf.operating_temperature || 'N/A'}</th>
+                    <td>${firewall2.acf.operating_temperature || 'N/A'}</td>
                   </tr>
                   <tr>
                     <th scope="row">Humidity</td>
-                    <td>${product1.acf.humidity || 'N/A'}</th>
-                    <td>${product2.acf.humidity || 'N/A'}</td>
+                    <td>${firewall1.acf.humidity || 'N/A'}</th>
+                    <td>${firewall2.acf.humidity || 'N/A'}</td>
                   </tr>
                   <tr class="tr-separator">
                     <th colspan="3" class="th-separator">Product Certifications</th>
                   </tr>
                   <tr>
                     <th scope="row">Certifications</td>
-                    <td>${product1.acf.certifications || 'N/A'}</th>
-                    <td>${product2.acf.certifications || 'N/A'}</td>
+                    <td>${firewall1.acf.certifications || 'N/A'}</th>
+                    <td>${firewall2.acf.certifications || 'N/A'}</td>
                   </tr>
 					      <tr>
                 </tbody>
