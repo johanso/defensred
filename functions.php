@@ -95,13 +95,35 @@ add_filter( 'big_image_size_threshold', '__return_false' );
 
 
 function expose_acf_fields_in_rest($response, $post, $request) {
-  if (function_exists('get_fields')) {
-      $acf_fields = get_fields($post->ID);
-      if ($acf_fields) {
-          $response->data['acf'] = $acf_fields;
-      }
-  }
-  return $response;
+    if (function_exists('get_fields')) {
+        $acf_fields = get_fields($post->ID);
+        if ($acf_fields) {
+            $response->data['acf'] = $acf_fields;
+        }
+    }
+    return $response;
 }
 
-add_filter('rest_prepare_producto', 'expose_acf_fields_in_rest', 10, 3);
+add_filter('rest_prepare_firewall', 'expose_acf_fields_in_rest', 10, 3);
+
+function add_taxonomy_to_rest() {
+  // Registrar la taxonomía 'marca' en la API REST
+  register_rest_field('firewall', 'marca', array(
+    'get_callback' => function($object) {
+      $terms = get_the_terms($object['id'], 'marca');
+      if (!empty($terms)) {
+        return array_map(function($term) {
+          return array(
+            'id' => $term->term_id,
+            'name' => $term->name,
+            'slug' => $term->slug,
+          );
+        }, $terms);
+      }
+      return null;
+    },
+    'update_callback' => null,
+    'schema' => null,
+));
+}
+add_action('rest_api_init', 'add_taxonomy_to_rest');
