@@ -41,8 +41,8 @@
     vertical-align: middle;
   }
 
-  .wp-block-table & td, 
-  .wp-block-table & th {
+   &.wp-block-table td, 
+   &.wp-block-table th {
     border: none;
     padding: .75em;
     border-bottom: 1px solid $border-color;
