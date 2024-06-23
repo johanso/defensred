@@ -69,11 +69,9 @@ document.addEventListener('DOMContentLoaded', function () {
                     <th scope="col" width="30%"></th>
                     <th scope="col" width="35%">
 						          ${firewall1.title.rendered}
-						          <img src="${firewall1.featured_image_url || ''}" alt="${firewall1.title.rendered}" style="width: 69px;margin-top: 8px;display: block;">
 					          </th>
                     <th scope="col" width="35%">
 						          ${firewall2.title.rendered}
-						          <img src="${firewall2.featured_image_url || ''}" alt="${firewall2.title.rendered}" style="width: 69px;margin-top: 8px;display: block;">
 					          </th>
                   </tr>
                 </thead>
