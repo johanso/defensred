@@ -17,6 +17,8 @@
       <!-- Selects para Marcas -->
 
       <div class="comparison-selects">
+
+      <div class="custom-select">
         <select id="brand1" name="brand1">
           <option value="">Selecciona una marca</option>
           <?php
@@ -29,6 +31,7 @@
           }
           ?>
         </select>
+      </div>
         <select id="firewall1" name="firewall1" style="display:none;">
           <option value="">Selecciona un firewall</option>
         </select>
