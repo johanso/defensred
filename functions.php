@@ -127,3 +127,19 @@ function add_taxonomy_to_rest() {
 ));
 }
 add_action('rest_api_init', 'add_taxonomy_to_rest');
+
+function add_featured_image_url_to_rest($response, $post, $request) {
+    // Verificar si el post tiene una imagen destacada
+    if (has_post_thumbnail($post->ID)) {
+        // Obtener la URL de la imagen destacada en el tamaño deseado (por ejemplo, 'thumbnail')
+        $featured_image_url = get_the_post_thumbnail_url($post->ID, 'thumbnail');
+    } else {
+        $featured_image_url = null;
+    }
+    // Añadir la URL de la imagen destacada a la respuesta de la API REST
+    $response->data['featured_image_url'] = $featured_image_url;
+    return $response;
+}
+
+// Añadir el filtro para incluir la URL de la imagen destacada en la API REST
+add_filter('rest_prepare_firewall', 'add_featured_image_url_to_rest', 10, 3);
