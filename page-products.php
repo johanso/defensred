@@ -35,7 +35,6 @@
       </div>
 
       <div class="comparison-selects">
-
         <select id="brand2" name="brand2">
           <option value="">Selecciona una marca</option>
           <?php
@@ -44,7 +43,6 @@
           }
           ?>
         </select>
-
         <select id="firewall2" name="firewall2" style="display:none;">
           <option value="">Selecciona un firewall</option>
         </select>
