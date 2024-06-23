@@ -5,8 +5,6 @@ function list_Post($quantity = -1) {
     'post_type' => 'post',
     'post_status' => 'publish',
     'posts_per_page' => $quantity,
-    'orderby' => 'date',
-    'order' => 'ASC'
   );
   $post_query = new WP_Query($args);
 
