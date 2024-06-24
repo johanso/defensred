@@ -1,11 +1,22 @@
-document.addEventListener('DOMContentLoaded', function() {
-  const brand1Select = document.getElementById('brand1');
-  const brand2Select = document.getElementById('brand2');
-  const firewall1Select = document.getElementById('firewall1');
-  const firewall2Select = document.getElementById('firewall2');
-  const comparisonTable = document.getElementById('comparison-table');
+jQuery(document).ready(function ($) {
+  // Inicializar Bootstrap Select en los selects
+  $('#brand1').selectpicker({
+    liveSearch: true,
+    noneSelectedText: 'Selecciona una marca'
+  });
+  $('#brand2').selectpicker({
+    liveSearch: true,
+    noneSelectedText: 'Selecciona una marca'
+  });
+  $('#firewall1').selectpicker({
+    liveSearch: true,
+    noneSelectedText: 'Selecciona un firewall'
+  });
+  $('#firewall2').selectpicker({
+    liveSearch: true,
+    noneSelectedText: 'Selecciona un firewall'
+  });
 
-  // Fetch firewalls by brand from the API
   async function fetchFirewallsByBrand(brandId) {
     const url = `/wp-json/wp/v2/firewall`;
 
@@ -14,19 +25,22 @@ document.addEventListener('DOMContentLoaded', function() {
       throw new Error('Network response was not ok');
     }
     const data = await response.json();
-    
-    // Filter the firewalls by the selected brand
     const filteredFirewalls = data.filter(firewall => {
       return firewall.marca && firewall.marca.some(term => term.id == brandId);
     });
-
     return filteredFirewalls;
   }
 
-  // Load firewalls into the select element
   async function loadFirewalls(selectElement, brandId) {
     try {
+      // Fetch firewalls filtered by brand
       const firewalls = await fetchFirewallsByBrand(brandId);
+
+      // Verifica si el selectElement existe
+      if (!selectElement) {
+        console.error('El elemento select no existe.');
+        return;
+      }
 
       // Clear previous options
       selectElement.innerHTML = '<option value="">Selecciona un firewall</option>';
@@ -39,15 +53,21 @@ document.addEventListener('DOMContentLoaded', function() {
         selectElement.appendChild(option);
       });
 
-      // Show the select element
+      // Show the select element and its previous sibling (label or placeholder)
       selectElement.style.display = 'block';
-      selectElement.previousElementSibling.style.display = 'block';
+      if (selectElement.previousElementSibling) {
+        selectElement.previousElementSibling.style.display = 'block';
+      }
+
+      // Refresh the Bootstrap Select picker to show new options
+      jQuery(selectElement).selectpicker('refresh');
+
     } catch (error) {
       console.error('Error loading firewalls:', error);
     }
   }
 
-  // Fetch details for a specific firewall
+
   async function fetchFirewallDetails(firewallId) {
     const response = await fetch(`/wp-json/wp/v2/firewall/${firewallId}`);
     if (!response.ok) {
@@ -57,10 +77,9 @@ document.addEventListener('DOMContentLoaded', function() {
     return firewallData;
   }
 
-  // Compare the selected firewalls and display the comparison table
   async function compareFirewalls() {
-    const firewall1Id = firewall1Select.value;
-    const firewall2Id = firewall2Select.value;
+    const firewall1Id = $('#firewall1').val();
+    const firewall2Id = $('#firewall2').val();
 
     if (firewall1Id && firewall2Id) {
       try {
@@ -69,8 +88,7 @@ document.addEventListener('DOMContentLoaded', function() {
           fetchFirewallDetails(firewall2Id)
         ]);
 
-        // Construct the comparison table using the ACF fields
-        comparisonTable.innerHTML = `
+        $('#comparison-table').html(`
           <div class="table-responsive">
             <table class="table table-striped">
               <thead class="border-light">
@@ -252,36 +270,34 @@ document.addEventListener('DOMContentLoaded', function() {
               </tbody>
             </table>
           </div>
-        `;
+        `);
       } catch (error) {
         console.error('Error fetching firewall details:', error);
-        comparisonTable.innerHTML = '<p>Error al cargar los firewalls. Por favor, inténtalo de nuevo.</p>';
+        $('#comparison-table').html('<p>Error al cargar los firewalls. Por favor, inténtalo de nuevo.</p>');
       }
     } else {
-      comparisonTable.innerHTML = '';
+      $('#comparison-table').html('');
     }
   }
 
-  // Event listeners to load firewalls based on the selected brand
-  brand1Select.addEventListener('change', function() {
-    if (brand1Select.value) {
-      loadFirewalls(firewall1Select, brand1Select.value);
+  $('#brand1').on('change', function () {
+    if ($(this).val()) {
+      loadFirewalls($('#firewall1')[0], $(this).val());
     } else {
-      firewall1Select.style.display = 'none';
-      firewall1Select.previousElementSibling.style.display = 'none';
+      $('#firewall1').hide();
+      $('#firewall1').prev().hide();
     }
   });
 
-  brand2Select.addEventListener('change', function() {
-    if (brand2Select.value) {
-      loadFirewalls(firewall2Select, brand2Select.value);
+  $('#brand2').on('change', function () {
+    if ($(this).val()) {
+      loadFirewalls($('#firewall2')[0], $(this).val());
     } else {
-      firewall2Select.style.display = 'none';
-      firewall2Select.previousElementSibling.style.display = 'none';
+      $('#firewall2').hide();
+      $('#firewall2').prev().hide();
     }
   });
 
-  // Event listeners to compare the selected firewalls
-  firewall1Select.addEventListener('change', compareFirewalls);
-  firewall2Select.addEventListener('change', compareFirewalls);
+  $('#firewall1').on('change', compareFirewalls);
+  $('#firewall2').on('change', compareFirewalls);
 });

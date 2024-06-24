@@ -17,43 +17,35 @@
       <!-- Selects para Marcas -->
 
       <div class="comparison-selects">
-        <div class="custom-select">
-          <select id="brand1" name="brand1">
-            <option value="">Selecciona una marca</option>
-            <?php
-            $brands = get_terms(array(
-              'taxonomy' => 'marca',
-              'hide_empty' => false,
-            ));
-            foreach ($brands as $brand) {
-              echo '<option value="' . $brand->term_id . '">' . $brand->name . '</option>';
-            }
-            ?>
-          </select>
-        </div>
-        <div class="custom-select">
-          <select id="firewall1" name="firewall1" style="display:none;">
-            <option value="">Selecciona un firewall</option>
-          </select>
-        </div>
+        <select id="brand1" name="brand1">
+          <option value="">Selecciona una marca</option>
+          <?php
+          $brands = get_terms(array(
+            'taxonomy' => 'marca',
+            'hide_empty' => false,
+          ));
+          foreach ($brands as $brand) {
+            echo '<option value="' . $brand->term_id . '">' . $brand->name . '</option>';
+          }
+          ?>
+        </select>
+        <select id="firewall1" name="firewall1" style="display:none;">
+          <option value="">Selecciona un firewall</option>
+        </select>
       </div>
 
       <div class="comparison-selects">
-        <div class="custom-select">
-          <select id="brand2" name="brand2">
-            <option value="">Selecciona una marca</option>
-            <?php
-            foreach ($brands as $brand) {
-              echo '<option value="' . $brand->term_id . '">' . $brand->name . '</option>';
-            }
-            ?>
-          </select>
-        </div>
-        <div class="custom-select">
-          <select id="firewall2" name="firewall2" style="display:none;">
-            <option value="">Selecciona un firewall</option>
-          </select>
-        </div>
+        <select id="brand2" name="brand2">
+          <option value="">Selecciona una marca</option>
+          <?php
+          foreach ($brands as $brand) {
+            echo '<option value="' . $brand->term_id . '">' . $brand->name . '</option>';
+          }
+          ?>
+        </select>
+        <select id="firewall2" name="firewall2" style="display:none;">
+          <option value="">Selecciona un firewall</option>
+        </select>
       </div>
     </form>
 

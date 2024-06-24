@@ -103,6 +103,10 @@
       align-items: center;
       gap: 1rem;
       margin-bottom: 1rem;
+
+      .bootstrap-select {
+        width: 100% !important;
+      }
     }
 
     .table {
