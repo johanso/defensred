@@ -92,6 +92,9 @@
     .comparison-table {
       padding: 1rem;
       background: rgb(249 249 249);
+      &:empty {
+        display: none;
+      }
     }
 
     .comparison-form {
