@@ -33,6 +33,9 @@ jQuery(document).ready(function ($) {
 
   async function loadFirewalls(selectElement, brandId) {
     try {
+		
+		$('#loading-spinner').show();
+		
       // Fetch firewalls filtered by brand
       const firewalls = await fetchFirewallsByBrand(brandId);
 
@@ -64,7 +67,10 @@ jQuery(document).ready(function ($) {
 
     } catch (error) {
       console.error('Error loading firewalls:', error);
-    }
+    } finally {
+    // Ocultar el spinner de carga
+    $('#loading-spinner').hide();
+  }
   }
 
 

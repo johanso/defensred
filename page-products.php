@@ -48,6 +48,8 @@
         </select>
       </div>
     </form>
+	  
+	  <div id="loading-spinner" class="loader" style="display:none;"></div>
 
     <section class="comparison-table" id="comparison-table"></section>
 
