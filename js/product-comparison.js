@@ -1,20 +1,25 @@
 jQuery(document).ready(function ($) {
   // Inicializar Bootstrap Select en los selects
   $('#brand1').selectpicker({
-    liveSearch: true,
-    noneSelectedText: 'Selecciona una marca'
+    liveSearch: false,
+    noneSelectedText: 'Selecciona una marca',
   });
   $('#brand2').selectpicker({
-    liveSearch: true,
-    noneSelectedText: 'Selecciona una marca'
+    liveSearch: false,
+    noneSelectedText: 'Selecciona una marca',
+
   });
   $('#firewall1').selectpicker({
     liveSearch: true,
-    noneSelectedText: 'Selecciona un firewall'
+    noneSelectedText: 'Selecciona un firewall',
+    liveSearchPlaceholder: 'Filtrar modelos',
+    liveSearchNormalize: true
   });
   $('#firewall2').selectpicker({
     liveSearch: true,
-    noneSelectedText: 'Selecciona un firewall'
+    noneSelectedText: 'Selecciona un firewall',
+    liveSearchPlaceholder: 'Filtrar modelos',
+    liveSearchNormalize: true
   });
 
   async function fetchFirewallsByBrand(brandId) {
