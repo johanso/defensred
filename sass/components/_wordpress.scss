@@ -52,3 +52,7 @@ pre.wp-block-code.consola {
 .dropdown-item:active {
   background-color: #0e1625 !important;
 }
+
+.bootstrap-select .dropdown-menu {
+  max-height: 15rem;
+}
