@@ -44,14 +44,11 @@ pre.wp-block-code.consola {
 }
 
 .form-control:focus {
-  outline: none;
-  box-shadow: none;
-  border-color: #0e1625;
+  box-shadow: none !important;
+  border-color: #0e1625 !important;
 }
 
 .dropdown-item.active, 
 .dropdown-item:active {
-  color: #fff;
-  text-decoration: none;
-  background-color: #0e1625;
+  background-color: #0e1625 !important;
 }
