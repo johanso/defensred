@@ -23,17 +23,34 @@ jQuery(document).ready(function ($) {
   });
 
   async function fetchFirewallsByBrand(brandId) {
-    const url = `/wp-json/wp/v2/firewall`;
-
-    const response = await fetch(url);
-    if (!response.ok) {
-      throw new Error('Network response was not ok');
+    const url = `/wp-json/wp/v2/firewall?per_page=100`;
+    let allFirewalls = [];
+    let page = 1;
+    let totalPages = 1;
+  
+    try {
+      while (page <= totalPages) {
+        const response = await fetch(`${url}&page=${page}`);
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        const data = await response.json();
+        const headers = response.headers;
+        totalPages = headers.get('X-WP-TotalPages');
+  
+        allFirewalls = allFirewalls.concat(data);
+        page++;
+      }
+  
+      const filteredFirewalls = allFirewalls.filter(firewall => {
+        return firewall.marca && firewall.marca.some(term => term.id == brandId);
+      });
+  
+      return filteredFirewalls;
+    } catch (error) {
+      console.error('Error fetching firewalls:', error);
+      return [];
     }
-    const data = await response.json();
-    const filteredFirewalls = data.filter(firewall => {
-      return firewall.marca && firewall.marca.some(term => term.id == brandId);
-    });
-    return filteredFirewalls;
   }
 
   async function loadFirewalls(selectElement, brandId) {
@@ -77,7 +94,6 @@ jQuery(document).ready(function ($) {
     $('#loading-spinner').hide();
   }
   }
-
 
   async function fetchFirewallDetails(firewallId) {
     const response = await fetch(`/wp-json/wp/v2/firewall/${firewallId}`);
