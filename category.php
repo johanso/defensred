@@ -10,6 +10,7 @@
 
   <div class="main-container blog">
     <div class="section-blog__content-boxes">
+
       <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
         <article class="section-blog__content-box">
@@ -45,7 +46,6 @@
       <?php endwhile; endif; ?>
     </div>
   </div>
-
 
   <?php render_banner_cta(
     '¿Listo para <span>Fortalecer tu Seguridad?</span>', 
