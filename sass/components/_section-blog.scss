@@ -64,6 +64,7 @@
         border-radius: .5rem;
         margin: -1rem;
         margin-bottom: 1rem;
+        position: relative;
         img {
           width: 100%;
           height: auto;
@@ -95,6 +96,30 @@
         overflow: hidden;
       }
 
+      .post-categories {
+        position: absolute;
+        z-index: 3;
+        list-style: none;
+        padding: 0;
+        right: 1rem;
+        bottom: 0rem;
+        a {
+          background: $tertiary-color;
+          text-decoration: none;
+          font-size: .9rem;
+          padding: 0 .5rem;
+          display: inline-block;
+          border-radius: .25rem;
+          color: $text-color;
+          font-weight: 600;
+          letter-spacing: 0;
+          transition: background .2s;
+          &:hover {
+            background: darken($tertiary-color, 5%);
+          }
+        }
+      }
+
       .button {
         display: none;
       }
@@ -106,6 +131,8 @@
       justify-content: center;
     }
   }
+
+  
 }
 
 .blog {

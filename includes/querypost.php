@@ -14,6 +14,9 @@ function list_Post($quantity = -1) {
       
       <article class="section-blog__content-box">
         <div class="section-blog__content-box-img">
+
+          <?php the_category(); ?>
+          
           <a href="<?php echo esc_url(get_permalink()); ?>">
             <?php if (has_post_thumbnail()) : ?>
               <?php the_post_thumbnail(); ?>
