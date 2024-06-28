@@ -8,6 +8,10 @@
     position: relative;
   }
 
+  &__title {
+    margin-bottom: 1rem;
+  }
+
   &__image {
     margin-bottom: 2rem;
     img {
@@ -18,11 +22,10 @@
   }
 
   &__metas {
-    display: none;
     gap: .75rem;
+    display: flex;
     align-items: center;
     margin-bottom: calc(map-get($sizes, m) + map-get($sizes, xs));
-    border-bottom: 1px solid $border-color;
     padding-bottom: map-get($sizes, xs);
     font-size: .75rem;
     .author {
@@ -35,6 +38,7 @@
         border-radius: 100%;
       }
     }
+
     .date {
       display: flex;
       align-items: center;
