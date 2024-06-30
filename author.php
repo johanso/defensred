@@ -1,52 +1,48 @@
 <?php get_header(); ?>
 
-  <section class="blog__header">
-    <?php 
-      $author = get_queried_object(); 
-    ?>
 
-    <h2 class="blog__title"><?php echo $author->display_name; ?> </h2>
-    <p class="blog__subtitle"><?php echo $author->description; ?></p>
-  </section>
+<div class="main-container blog author">
 
-  <div class="main-container blog">
-    <div class="section-blog__content-boxes">
+  <?php get_template_part('template-parts/post-author'); ?>
 
-      <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+  <div class="section-blog__content-boxes">
 
-        <article class="section-blog__content-box">
-          <div class="section-blog__content-box-img">
+    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-            <?php the_category(); ?>
-            
-            <a href="<?php echo esc_url(get_permalink()); ?>">
-              <?php if (has_post_thumbnail()) : ?>
-                <?php the_post_thumbnail(); ?>
-              <?php endif; ?>
-            </a>
-          </div>
+      <article class="section-blog__content-box">
+        <div class="section-blog__content-box-img">
 
-          <a href="<?php echo esc_url(get_permalink()); ?>" class="section-blog__content-box-link">
-            <h3 class="section-blog__content-box-title">
-              <?php the_title(); ?>
-            </h3>
+          <?php the_category(); ?>
+          
+          <a href="<?php echo esc_url(get_permalink()); ?>">
+            <?php if (has_post_thumbnail()) : ?>
+              <?php the_post_thumbnail(); ?>
+            <?php endif; ?>
           </a>
+        </div>
 
-          <p class="section-blog__content-box-text">
-            <?php echo esc_html(excerpt('22')); ?>
-          </p>
+        <a href="<?php echo esc_url(get_permalink()); ?>" class="section-blog__content-box-link">
+          <h3 class="section-blog__content-box-title">
+            <?php the_title(); ?>
+          </h3>
+        </a>
 
-          <a href="<?php echo esc_url(get_permalink()); ?>" class="button button--primary">
-            <span class="section-blog__content-box-btn-text"><?php esc_html_e('Leer más', 'your-text-domain'); ?></span>
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
-              <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
-            </svg>
-          </a>
-        </article>
+        <p class="section-blog__content-box-text">
+          <?php echo esc_html(excerpt('22')); ?>
+        </p>
 
-      <?php endwhile; endif; ?>
-    </div>
+        <a href="<?php echo esc_url(get_permalink()); ?>" class="button button--primary">
+          <span class="section-blog__content-box-btn-text"><?php esc_html_e('Leer más', 'your-text-domain'); ?></span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+          </svg>
+        </a>
+      </article>
+
+    <?php endwhile; endif; ?>
   </div>
+
+</div>
 
   <?php render_banner_cta(
     '¿Listo para <span>Fortalecer tu Seguridad?</span>', 
