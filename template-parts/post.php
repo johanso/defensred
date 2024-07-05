@@ -31,6 +31,8 @@
 
       <?php the_content(); ?>
 
+      <hr class="post__divider">
+
       <?php get_template_part('template-parts/post-author'); ?>
 
       <?php if ( comments_open() || get_comments_number() ) : ?>
