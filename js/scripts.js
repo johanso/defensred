@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   initPageFunctionalities();
   window.addEventListener("scroll", handleScroll);
-  carrouselImagesHotel()
+  carrouselServices()
   faqAccordion()
   loadFormContact()
   contactFormSelect()
@@ -147,7 +147,7 @@ const contactFormSelect = () => {
   });
 }
 
-const carrouselImagesHotel = () => {
+const carrouselServices = () => {
   const carousels = document.querySelectorAll('.main-carousel');
   carousels.forEach(carousel => {
     new Flickity(carousel, {
