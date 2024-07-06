@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   initPageFunctionalities();
   window.addEventListener("scroll", handleScroll);
+  carrouselImagesHotel()
   faqAccordion()
   loadFormContact()
   contactFormSelect()
@@ -143,5 +144,18 @@ const contactFormSelect = () => {
     if (firstOption && firstOption.value === '') {
       firstOption.disabled = true;
     }
+  });
+}
+
+const carrouselImagesHotel = () => {
+  const carousels = document.querySelectorAll('.main-carousel');
+  carousels.forEach(carousel => {
+    new Flickity(carousel, {
+      cellAlign: 'left',
+      contain: true,
+      pageDots: true,
+      freeScroll: false,
+      wrapAround: true
+    });
   });
 }

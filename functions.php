@@ -10,7 +10,9 @@ function travels_styles()
 
   wp_enqueue_style('style', get_stylesheet_uri(), array(), '1.0.0', 'all');
   wp_enqueue_style('icons', get_template_directory_uri() . '/icons/style.css', array(), '1.0.0', 'all');
+  wp_enqueue_style('flickity-styles', get_template_directory_uri() . '/styles/flickity.css', array(), '8.0.1', 'all');	
 
+  wp_enqueue_script('flickity', get_template_directory_uri() . '/js/flickity.pkgd.min.js', '' ,'2.3.0', true);
   wp_enqueue_script('script', get_template_directory_uri() . '/js/scripts.js', array('jquery'), '1.0.0', true);
 }
 add_action('wp_enqueue_scripts', 'travels_styles');
