@@ -151,7 +151,7 @@ const carrouselServices = () => {
   const carousels = document.querySelectorAll('.main-carousel');
   carousels.forEach(carousel => {
     new Flickity(carousel, {
-      cellAlign: 'left',
+      cellAlign: 'center',
       contain: true,
       pageDots: true,
       freeScroll: false,
