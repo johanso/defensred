@@ -183,7 +183,7 @@
           <p class="section-blog__content-text">Mantente informado con nuestras últimas publicaciones sobre ciberseguridad.</p>
 
           <div class="section-blog__content-boxes">
-            <?php list_Post(3) ?>
+            <?php list_Post(6) ?>
           </div>
 
           <div class="section-blog__content-button">
