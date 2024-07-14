@@ -28,13 +28,15 @@
   }
 
   &__span {
-    color: $tertiary-color;
+    font-family: var(--font-family-alternate);
     font-size: 1.5rem;
     display: flex;
     align-items: center;
-    gap: 0.25rem;
     @include mq(lg) {
       font-size: 1.75rem;
+    }
+    &--last {
+      color: $tertiary-color;
     }
   }
 
