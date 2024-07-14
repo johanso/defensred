@@ -46,8 +46,10 @@ https://flickity.metafizzy.co
 
 .flickity-button {
   background: #00afc6;
-  border-radius: 0;
-  width: 2rem;
+  border-radius: 0 !important;
+  width: 2rem !important;
+  position: absolute;
+  border: none;
 }
 
 .flickity-button:hover {

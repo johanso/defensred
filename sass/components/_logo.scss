@@ -9,26 +9,33 @@
   font-weight: bold;
   gap: .25rem;
   z-index: 1;
-  @include mq(lg) {
-    font-size: 1.2rem;
-  }
+
   &:hover {
     span:after {
       background: rgba(0, 0, 0, 0.7);
     }
   }
+  
   a {
     text-decoration: none;
     color: $white-color;
   }
+
   img {
     width: 2rem;
     filter: invert(1);
+    margin-right: .25rem;
   }
+
   &__span {
+    color: $tertiary-color;
+    font-size: 1.5rem;
     display: flex;
     align-items: center;
     gap: 0.25rem;
+    @include mq(lg) {
+      font-size: 1.75rem;
+    }
   }
 
   .flag {
