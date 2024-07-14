@@ -38,6 +38,7 @@
     <div class="popup__inner">
       <div class="popup__content">
         <?php echo do_shortcode('[contact-form-7 id="78f6dac" title="Contacto"]'); ?>
+        <p class="form__disclaimer">Estamos comprometidos con tu privacidad. Cybersegura utiliza la información que usted nos proporciona para contactarlo sobre nuestro contenido, productos y servicios relevantes. Podrá darse de baja de estas comunicaciones en cualquier momento. Para obtener más información, consulta nuestra <a href="https://ciberblog.net/politica-privacidad/" target="_blank">Política de Privacidad</a>.</p>
       </div>
       <span class="popup__close">
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
