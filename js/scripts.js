@@ -39,9 +39,9 @@ const initPageFunctionalities = () => {
     })
   })
 
-  buttonMore.addEventListener("click", () => {
+  buttonMore?.addEventListener("click", () => {
     const hiddenDetails = document.querySelectorAll("#faq details.hidden");
-    hiddenDetails.forEach((details) => {
+    hiddenDetails?.forEach((details) => {
       details.classList.remove("hidden");
     });
     buttonMore.style.display = "none";
@@ -92,7 +92,7 @@ const handleScroll = () => {
 const faqAccordion = () => {
   const allDetails = document.querySelectorAll("#faq details");
 
-  allDetails.forEach((details, index) => {
+  allDetails?.forEach((details, index) => {
     if (index >= 5) {
       details.classList.add("hidden");
     }
