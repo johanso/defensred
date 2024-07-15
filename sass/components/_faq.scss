@@ -27,7 +27,7 @@
     
     .faq-box {
       background: $white-color;
-      border-bottom: 2px solid #f3f3f3;
+      border: 2px solid #f3f3f3;
       height: auto;
       border-radius: 25px;
       margin-bottom: .75rem;
@@ -64,6 +64,7 @@
       background-color: transparent;
       user-select: none;
       cursor: pointer;
+      position: relative;
     }
 
     .faq-content {
