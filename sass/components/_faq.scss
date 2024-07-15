@@ -21,15 +21,22 @@
 
     &-boxes {
       @include mq(lg) {
-        max-width: 70%;
-        margin: auto;
+        margin: auto 4rem;
       }
     }
     
     .faq-box {
       background: $white-color;
-      border-bottom: 1px solid $border-color;
+      border-bottom: 2px solid $border-color;
       height: auto;
+      border-radius: 25px;
+      margin-bottom: .75rem;
+      summary {
+        padding-left: 2rem;
+        &::marker {
+          content: none;
+        }
+      }
       &[open] summary {
         background: $secondary-color;
         color: $white-color;
