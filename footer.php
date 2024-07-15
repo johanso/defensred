@@ -20,7 +20,7 @@
         </div>
       </div>
 
-      <span class="footer__disclaimer">En defender.com, ofrecemos información precisa y actualizada sobre ciberseguridad, protección digital y las últimas noticias del sector. Si bien nuestro blog y nuestras noticias proporcionan información general valiosa, también brindamos asesoría profesional a interesados en nuestros servicios. Para obtener asesoramiento específico y personalizado, por favor, ponte en contacto con nuestros expertos a través de las opciones de contacto disponibles en nuestro sitio. defender.com no se responsabiliza por errores u omisiones en el contenido ni por cualquier pérdida o daño resultante del uso de la información aquí proporcionada.</span>
+      <span class="footer__disclaimer">En ciberblog.net ofrecemos información precisa y actualizada sobre ciberseguridad, protección digital y las últimas noticias del sector. Si bien nuestro blog y nuestras noticias proporcionan información general valiosa, también brindamos asesoría profesional a interesados en nuestros servicios. Para obtener asesoramiento específico y personalizado, por favor, ponte en contacto con nuestros expertos a través de las opciones de contacto disponibles en nuestro sitio. defender.com no se responsabiliza por errores u omisiones en el contenido ni por cualquier pérdida o daño resultante del uso de la información aquí proporcionada.</span>
 
       <p class="footer__copyright">
         <span class="page-legal"><a href="<?php echo site_url('/politica-de-cookies/'); ?>" target="_blank">Política de Cookies</a></span>

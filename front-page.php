@@ -198,80 +198,153 @@
       <div class="main-container">
         <div class="faq__content">
           <div class="faq__info">
-            <h2 class="section-title">Preguntas Frecuentes</h2>
-            <p class="faq__content-text">Resolvemos tus dudas más comunes sobre nuestras soluciones y servicios de ciberseguridad.</p>
+            <h2 class="section-title">Preguntas Frecuentes sobre Ciberseguridad</h2>
+            <p class="faq__content-text">Encuentra respuestas a las dudas más comunes sobre cómo proteger tu empresa y mantener segura tu infraestructura digital.</p>
             <div class="faq__content-boxes" id="faq">
               
               <details class="faq-box" open>
-                <summary class="faq-header">¿Qué es la ciberseguridad y por qué es importante?</summary>
+                <summary class="faq-header">¿Qué es la ciberseguridad?</summary>
                 <div class="faq-content">
-                  <p>La ciberseguridad consiste en proteger sistemas, redes y programas de ataques digitales. Es crucial para prevenir el robo de datos, fraudes y otros daños a tu empresa.</p>
+                  <p>La ciberseguridad es la práctica de proteger sistemas, redes y programas contra ataques digitales que buscan acceder, alterar o destruir información sensible, extorsionar a los usuarios o interrumpir los procesos normales de negocio.</p>
                 </div>
               </details>
 
               <details class="faq-box">
-                <summary class="faq-header">¿Cómo protegen los endpoints sus soluciones?</summary>
+                <summary class="faq-header">¿Por qué es importante la ciberseguridad para mi empresa?</summary>
                 <div class="faq-content">
-                  <p>Utilizamos tecnologías avanzadas de detección y respuesta para proteger todos los dispositivos conectados a tu red, asegurando que estén a salvo de amenazas.</p>
+                  <p>La ciberseguridad es crucial para proteger la información sensible, mantener la continuidad operativa y asegurar la confianza de los clientes. Además, ayuda a cumplir con las regulaciones y a prevenir pérdidas financieras.</p>
+                </div>
+              </details>
+              
+              <details class="faq-box">
+                <summary class="faq-header">¿Cuáles son las amenazas cibernéticas más comunes?</summary>
+                <div class="faq-content">
+                  <p>Las amenazas cibernéticas más comunes incluyen malware, ransomware, phishing, ataques de denegación de servicio (DoS) y ataques de ingeniería social.</p>
+                </div>
+              </details>
+              
+              <details class="faq-box">
+                <summary class="faq-header">¿Qué es un firewall y cómo protege mi red?</summary>
+                <div class="faq-content">
+                  <p>Un firewall es un sistema de seguridad que monitorea y controla el tráfico de red entrante y saliente basado en reglas de seguridad predeterminadas. Protege la red al bloquear el acceso no autorizado y prevenir ataques.</p>
+                </div>
+              </details>
+              
+              <details class="faq-box">
+                <summary class="faq-header">¿Qué es el phishing y cómo puedo protegerme?</summary>
+                <div class="faq-content">
+                  <p>El phishing es un tipo de ciberataque en el que los atacantes se hacen pasar por entidades legítimas para robar información personal y financiera. Para protegerte, nunca hagas clic en enlaces sospechosos y verifica la autenticidad de los remitentes.</p>
+                </div>
+              </details>
+              
+              <details class="faq-box">
+                <summary class="faq-header">¿Qué debo hacer si creo que mi dispositivo ha sido infectado por malware?</summary>
+                <div class="faq-content">
+                  <p>Si sospechas que tu dispositivo ha sido infectado por malware, desconéctalo de internet, ejecuta un análisis completo con un software antivirus actualizado y cambia todas tus contraseñas.</p>
+                </div>
+              </details>
+              
+              <details class="faq-box hidden">
+                <summary class="faq-header">¿Cómo puedo proteger mis dispositivos móviles?</summary>
+                <div class="faq-content">
+                  <p>Para proteger tus dispositivos móviles, utiliza contraseñas fuertes, habilita la autenticación de dos factores, mantén el software actualizado y descarga aplicaciones solo de fuentes confiables.</p>
                 </div>
               </details>
 
-              <details class="faq-box">
-                <summary class="faq-header">¿Qué diferencia a un firewall de un antivirus?</summary>
+              <details class="faq-box hidden">
+                <summary class="faq-header">¿Qué es la protección de endpoints?</summary>
                 <div class="faq-content">
-                  <p>Un firewall controla el tráfico de red para bloquear accesos no autorizados, mientras que un antivirus detecta y elimina malware de tus dispositivos.</p>
+                  <p>La protección de endpoints se refiere a la seguridad de los dispositivos finales, como computadoras, laptops y móviles, contra amenazas cibernéticas mediante el uso de software de seguridad y medidas de protección.</p>
+                </div>
+              </details>
+
+              <details class="faq-box hidden">
+                <summary class="faq-header">¿Cómo puedo garantizar la seguridad en la nube?</summary>
+                <div class="faq-content">
+                  <p>Para garantizar la seguridad en la nube, utiliza cifrado de datos, implementa controles de acceso fuertes, realiza auditorías de seguridad regulares y sigue las mejores prácticas recomendadas por el proveedor de servicios en la nube.</p>
+                </div>
+              </details>
+
+              <details class="faq-box hidden">
+                <summary class="faq-header">¿Qué es un antivirus y cómo funciona?</summary>
+                <div class="faq-content">
+                  <p>Un antivirus es un software diseñado para detectar, prevenir y eliminar malware. Funciona escaneando archivos y programas en busca de patrones maliciosos conocidos y poniendo en cuarentena o eliminando las amenazas detectadas.</p>
+                </div>
+              </details>
+
+              <details class="faq-box hidden">
+                <summary class="faq-header">¿Qué medidas de seguridad debo implementar para el trabajo remoto?</summary>
+                <div class="faq-content">
+                  <p>Para el trabajo remoto, implementa una red privada virtual (VPN), utiliza autenticación de dos factores, asegura todos los dispositivos con software de seguridad y educa a los empleados sobre las mejores prácticas de seguridad.</p>
+                </div>
+              </details>
+
+              <details class="faq-box hidden">
+                <summary class="faq-header">¿Qué es el ransomware y cómo puedo protegerme?</summary>
+                <div class="faq-content">
+                  <p>El ransomware es un tipo de malware que encripta los datos del usuario y exige un rescate para desbloquearlos. Para protegerte, realiza copias de seguridad regulares, mantén el software actualizado y educa a los empleados sobre los riesgos del phishing.</p>
+                </div>
+              </details>
+
+              <details class="faq-box hidden">
+                <summary class="faq-header">¿Qué es la autenticación de dos factores (2FA)?</summary>
+                <div class="faq-content">
+                  <p>La autenticación de dos factores es un método de seguridad que requiere dos formas de verificación para acceder a una cuenta o sistema, generalmente una contraseña y un código enviado a un dispositivo móvil.</p>
+                </div>
+              </details>
+
+              <details class="faq-box hidden">
+                <summary class="faq-header">¿Cómo puedo proteger mis datos personales en línea?</summary>
+                <div class="faq-content">
+                  <p>Para proteger tus datos personales en línea, utiliza contraseñas fuertes, habilita la autenticación de dos factores, no compartas información sensible en redes públicas y mantén el software actualizado.</p>
+                </div>
+              </details>
+
+              <details class="faq-box hidden">
+                <summary class="faq-header">¿Qué debo hacer si he sido víctima de un ataque de phishing?</summary>
+                <div class="faq-content">
+                  <p>Si has sido víctima de un ataque de phishing, cambia tus contraseñas inmediatamente, notifica a las entidades afectadas, monitorea tus cuentas en busca de actividades sospechosas y considera informar el incidente a las autoridades.</p>
+                </div>
+              </details>
+
+              <details class="faq-box hidden">
+                <summary class="faq-header">¿Qué es un ataque de denegación de servicio (DoS)?</summary>
+                <div class="faq-content">
+                  <p>Un ataque de denegación de servicio (DoS) es un intento de hacer que un servicio o red sea inaccesible para los usuarios legítimos al abrumarlo con un flujo excesivo de tráfico malicioso.</p>
+                </div>
+              </details>
+
+              <details class="faq-box hidden">
+                <summary class="faq-header">¿Qué es la seguridad de red?</summary>
+                <div class="faq-content">
+                  <p>La seguridad de red implica la implementación de medidas para proteger la usabilidad, confiabilidad, integridad y seguridad de una red y sus datos, mediante el uso de firewalls, VPNs, sistemas de detección de intrusos y más.</p>
+                </div>
+              </details>
+
+              <details class="faq-box hidden">
+                <summary class="faq-header">¿Cómo puedo educar a mis empleados sobre ciberseguridad?</summary>
+                <div class="faq-content">
+                  <p>Puedes educar a tus empleados sobre ciberseguridad a través de programas de capacitación regulares, simulaciones de phishing, talleres interactivos y proporcionándoles recursos actualizados sobre las mejores prácticas de seguridad.</p>
+                </div>
+              </details>
+
+              <details class="faq-box hidden">
+                <summary class="faq-header">¿Qué es la ingeniería social y cómo puedo protegerme?</summary>
+                <div class="faq-content">
+                  <p>La ingeniería social es una táctica de manipulación utilizada por los atacantes para engañar a las personas y hacer que revelen información confidencial. Protégete siendo cauteloso con las solicitudes de información, verificando la autenticidad de las comunicaciones y educándote sobre las tácticas comunes.</p>
+                </div>
+              </details>
+
+              <details class="faq-box hidden">
+                <summary class="faq-header">¿Qué pasos debo seguir para implementar una política de ciberseguridad en mi empresa?</summary>
+                <div class="faq-content">
+                  <p>Para implementar una política de ciberseguridad en tu empresa, realiza una evaluación de riesgos, define roles y responsabilidades, establece procedimientos claros, proporciona capacitación continua y revisa y actualiza la política regularmente.</p>
                 </div>
               </details>
               
-              <details class="faq-box">
-                <summary class="faq-header">¿Qué es la gestión de amenazas?</summary>
-                <div class="faq-content">
-                  <p>Es el proceso de monitoreo continuo y respuesta a incidentes para identificar y mitigar amenazas antes de que causen daños significativos.</p>
-                </div>
-              </details>
-              
-              <details class="faq-box">
-                <summary class="faq-header">¿Cómo funciona la seguridad en la nube?</summary>
-                <div class="faq-content">
-                  <p>La seguridad en la nube protege tus datos y aplicaciones alojados en servicios cloud mediante medidas como cifrado, autenticación y monitoreo constante.</p>
-                </div>
-              </details>
-              
-              <details class="faq-box">
-                <summary class="faq-header">¿Qué incluye la protección de datos?</summary>
-                <div class="faq-content">
-                  <p>Ofrecemos soluciones de cifrado, respaldo y recuperación de datos para asegurar que tu información crítica esté siempre protegida y disponible.</p>
-                </div>
-              </details>
-              
-              <details class="faq-box">
-                <summary class="faq-header">¿Qué es la prevención de intrusiones?</summary>
-                <div class="faq-content">
-                  <p>Es un conjunto de prácticas y tecnologías diseñadas para detectar y detener actividades sospechosas o maliciosas antes de que puedan infiltrarse en tu sistema.</p>
-                </div>
-              </details>
-              
-              <details class="faq-box">
-                <summary class="faq-header">¿Cómo puedo asegurar mi red Wi-Fi?</summary>
-                <div class="faq-content">
-                  <p>Implementamos medidas como autenticación segura, cifrado WPA3 y segmentación de red para proteger tus redes Wi-Fi contra accesos no autorizados.</p>
-                </div>
-              </details>
-              
-              <details class="faq-box">
-                <summary class="faq-header">¿Qué es la seguridad sincronizada?</summary>
-                <div class="faq-content">
-                  <p>La seguridad sincronizada integra varias soluciones de seguridad para que trabajen juntas, ofreciendo una protección más coherente y efectiva.</p>
-                </div>
-              </details>
-            
-              <details class="faq-box">
-                <summary class="faq-header">¿Ofrecen soporte en caso de un incidente de seguridad?</summary>
-                <div class="faq-content">
-                  <p>Sí, nuestro equipo de expertos está disponible 24/7 para asistirte en la resolución de incidentes y recuperación de tu sistema.</p>
-                </div>
-              </details>
             </div>
+
+            <button class="button button--cta button--icon" id="faq-button">Ver más preguntas</button>
           </div>
         </div>
       </div>

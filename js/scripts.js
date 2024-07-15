@@ -13,6 +13,8 @@ const initPageFunctionalities = () => {
   const mediaQuery = window.matchMedia('(max-width: 720px)');
   const goTop = document.querySelector(".goto-top");
   const header = document.querySelector(".header");
+  const buttonMore = document.querySelector("#faq-button");
+
 
   // Menu Responsive
   menuToggle.addEventListener('click', () => {
@@ -36,6 +38,14 @@ const initPageFunctionalities = () => {
       behavior: 'smooth'
     })
   })
+
+  buttonMore.addEventListener("click", () => {
+    const hiddenDetails = document.querySelectorAll("#faq details.hidden");
+    hiddenDetails.forEach((details) => {
+      details.classList.remove("hidden");
+    });
+    buttonMore.style.display = "none";
+  });
 }
 
 const handleScroll = () => {
@@ -81,7 +91,11 @@ const handleScroll = () => {
 
 const faqAccordion = () => {
   const allDetails = document.querySelectorAll("#faq details");
-  allDetails.forEach((details) => {
+
+  allDetails.forEach((details, index) => {
+    if (index >= 5) {
+      details.classList.add("hidden");
+    }
     details.addEventListener("toggle", () => {
       if (details.open) {
         allDetails.forEach((otherDetails) => {
