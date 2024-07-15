@@ -37,13 +37,9 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 1rem;
+      padding: 0 1rem;
       text-align: center;
       position: relative;
-
-      @include mq(lg) {
-        padding: 0 1rem;
-      }
 
       &::after {
         @include mq(xl) {
