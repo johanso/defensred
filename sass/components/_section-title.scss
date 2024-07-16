@@ -4,11 +4,16 @@
 
 .section-title {
   font-family: var(--font-family-alternate);
+  font-size: 1.5rem;
   text-align: center;
   margin-bottom: 1rem;
   color: $text-color;
   text-transform: uppercase;
   span {
     color: $tertiary-color;
+  }
+
+  @include mq(lg) { 
+    font-size: 2rem;
   }
 }
