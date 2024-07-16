@@ -3,13 +3,12 @@
 @use '../abstracts/functions' as *;
 
 .hero {
-  background: url(./assets/banner-bg.jpg) no-repeat top left;
+  background: url(./assets/banner-bg.jpg) no-repeat center;
   background-size: cover;
-  background-position: top left;
   height: 70vh;
   
   @include mq(lg) {
-    background-position: top right;
+    background-position: center right;
     background-attachment: fixed;
   }
 
@@ -25,7 +24,7 @@
     position: absolute;
     z-index: 0;
     filter: brightness(0.5);
-    opacity: 0.75;
+    opacity: 0.8;
   }
 
   &__container {

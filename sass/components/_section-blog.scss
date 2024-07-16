@@ -114,8 +114,25 @@
           font-weight: 600;
           letter-spacing: 0;
           transition: background .2s;
-          &:hover {
-            background: darken($tertiary-color, 5%);
+          color: #fff;
+
+          &[href*="tecnologia"] {
+            background: #FF9800;
+            &:hover {
+              background: darken(#FF9800, 5%);
+            }
+          }
+          &[href*="seguridad"] {
+            background: #673AB7;
+            &:hover {
+              background: darken(#673AB7, 5%);
+            }
+          }
+          &[href*="noticias"] {
+            background: #4CAF50;
+            &:hover {
+              background: darken(#4CAF50, 5%);
+            }
           }
         }
       }

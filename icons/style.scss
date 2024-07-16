@@ -2,11 +2,11 @@
 
 @font-face {
   font-family: '#{$icomoon-font-family}';
-  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?ijx4v6');
-  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?ijx4v6#iefix') format('embedded-opentype'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?ijx4v6') format('truetype'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?ijx4v6') format('woff'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?ijx4v6##{$icomoon-font-family}') format('svg');
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?m291q8');
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?m291q8#iefix') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?m291q8') format('truetype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?m291q8') format('woff'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?m291q8##{$icomoon-font-family}') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -27,6 +27,11 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-send {
+  &:before {
+    content: $icon-send; 
+  }
+}
 .icon-chevron-down {
   &:before {
     content: $icon-chevron-down; 
