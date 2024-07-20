@@ -1,3 +1,7 @@
+@use '../abstracts/mixins' as *;
+@use '../abstracts/variables' as *;
+@use '../abstracts/functions' as *;
+
 .wp-block-image {
   margin-bottom: 2rem;
   &.size-full {
@@ -41,6 +45,29 @@ pre.wp-block-code.consola {
 
 .wpp-list li a {
   color: red !important;
+}
+
+ol.wp-block-list {
+  list-style: none;
+  counter-reset: item;
+  position: relative;
+  padding-left: 2.5rem;
+  li {
+    counter-increment: item;
+  }
+  li:before {
+    font: normal normal bold 1.1rem / 1.6 "Cairo", sans-serif;
+    content: counter(item);
+    background: $primary-color;
+    border-radius: 100%;
+    color: $white-color;
+    text-align: center;
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    height: 1.75rem;
+    width: 1.75rem;
+  }
 }
 
 .form-control:focus {
