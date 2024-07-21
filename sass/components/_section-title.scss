@@ -16,4 +16,10 @@
   @include mq(lg) { 
     font-size: 2rem;
   }
+
+  &.--sidebar {
+    @include mq(lg) { 
+      font-size: 1.5rem;
+    }
+  }
 }

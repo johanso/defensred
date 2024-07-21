@@ -28,9 +28,9 @@
   </div>
 
   <?php render_banner_cta(
-      '¿Listo para <span>Fortalecer tu Seguridad?</span>', 
-      'Contáctanos hoy para una consulta gratuita y descubre cómo podemos proteger tu empresa.',
-      'banner-cta--last'); 
-    ?>
+    '¿Listo para <span>Fortalecer tu Seguridad?</span>', 
+    'Contáctanos hoy para una consulta gratuita y descubre cómo podemos proteger tu empresa.',
+    'banner-cta--last'); 
+  ?>
 
 <?php get_footer(); ?>
