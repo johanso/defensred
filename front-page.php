@@ -3,40 +3,131 @@
   <div class="home__main">
 
     <section class="home__intro">
-      <div class="main-container">
-        <span class="home__intro-how">Somos Expertos en:</span>
-        <h2 class="section-title">Soluciones de Seguridad</h2>
-        <p class="home__intro-text">Explore nuestras principales áreas de especialización diseñadas para proteger cada aspecto de tu infraestructura digital.</p>
-        <div class="home__intro-boxes">
-          <div class="home__intro-box">
-            <div class="home__intro-box-img">
+      <span class="home__intro-how">Somos Expertos en:</span>
+      <h2 class="section-title">Soluciones de Seguridad</h2>
+      <p class="home__intro-text">Explore nuestras principales áreas de especialización diseñadas para proteger cada aspecto de tu infraestructura digital.</p>
+      <div class="services__content-boxes main-carousel">
+
+        <div class="services__content-box">
+          <a href="/ciberseguridad/">
+            <div class="services__content-box-img">
               <img src="<?php echo get_template_directory_uri(); ?>/assets/n3.png" alt="logo ciberseguridad">
             </div>
-            <h3 class="home__intro-box-title">Ciberseguridad</h3>
-            <p class="home__intro-box-text">Soluciones para proteger tu empresa contra amenazas cibernéticas.</p>
-          </div>
-          <div class="home__intro-box">
-            <div class="home__intro-box-img">
+            <h3 class="services__content-box-title">Ciberseguridad</h3>
+            <p class="services__content-box-text">Soluciones para proteger tu empresa contra amenazas cibernéticas.</p>
+          </a>
+        </div>
+
+        <div class="services__content-box">
+          <a href="/proteccion-de-endpoints/">
+            <div class="services__content-box-img">
               <img src="<?php echo get_template_directory_uri(); ?>/assets/n5.png" alt="logo endoints">
             </div>
-            <h3 class="home__intro-box-title">Protección de Endpoints</h3>
-            <p class="home__intro-box-text">Seguridad avanzada para todos tus dispositivos.</p>
-          </div>
-          <div class="home__intro-box">
-            <div class="home__intro-box-img">
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/n6.png" alt="logo antivirus">
-            </div>
-            <h3 class="home__intro-box-title">Firewall y Antivirus</h3>
-            <p class="home__intro-box-text">Defensa robusta contra malware y accesos no autorizados</p>
-          </div>
-          <div class="home__intro-box">
-            <div class="home__intro-box-img">
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/n7.png" alt="logo antivirus">
-            </div>
-            <h3 class="home__intro-box-title">Seguridad de Red y  Nube</h3>
-            <p class="home__intro-box-text">Protección integral para redes empresariales.</p>
-          </div>
+            <h3 class="services__content-box-title">Protección de Endpoints</h3>
+            <p class="services__content-box-text">Seguridad avanzada para todos tus dispositivos, desde computadoras hasta móviles.</p>
+          </a>
         </div>
+
+        <div class="services__content-box">
+          <a href="/firewall/">
+            <div class="services__content-box-img">
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/n6.png" alt="logo Firewall">
+            </div>
+            <h3 class="services__content-box-title">Firewall</h3>
+            <p class="services__content-box-text">Defensa robusta para evitar accesos no autorizados y proteger tus redes.</p>
+          </a>
+        </div>
+
+        <div class="services__content-box">
+          <a href="/antivirus/">
+            <div class="services__content-box-img">
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/s5.png" alt="logo antivirus">
+            </div>
+            <h3 class="services__content-box-title">Antivirus</h3>
+            <p class="services__content-box-text">Protección eficaz contra malware, virus y otras amenazas digitales.</p>
+          </a>
+        </div>
+
+        <div class="services__content-box">
+          <a href="/seguridad-de-red/">
+            <div class="services__content-box-img">
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/s2.png" alt="logo ciberseguridad">
+            </div>
+            <h3 class="services__content-box-title">Seguridad de Red</h3>
+            <p class="services__content-box-text">Protección integral para mantener seguras tus redes empresariales.</p>
+          </a>
+        </div>
+
+        <div class="services__content-box">
+          <a href="/gestion-de-amenazas/">
+            <div class="services__content-box-img">
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/s6.png" alt="logo ciberseguridad">
+            </div>
+            <h3 class="services__content-box-title">Gestión de Amenazas</h3>
+            <p class="services__content-box-text">Monitoreo y respuesta a incidentes para proteger tu infraestructura.</p> 
+          </a>
+        </div>
+
+        <div class="services__content-box">
+          <a href="/seguridad-en-la-nube/">
+            <div class="services__content-box-img">
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/n7.png" alt="logo ciberseguridad">
+            </div>
+            <h3 class="services__content-box-title">Seguridad en la Nube</h3>
+            <p class="services__content-box-text">Protege tus aplicaciones y datos en entornos cloud.</p> 
+          </a>
+        </div>
+
+        <div class="services__content-box">
+          <a href="/seguridad-de-correo-electronico/">
+            <div class="services__content-box-img">
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/correo.png" alt="logo ciberseguridad">
+            </div>
+            <h3 class="services__content-box-title">Seguridad de Correo Electrónico</h3>
+            <p class="services__content-box-text">Protección contra phishing, spam y otras amenazas de correo electrónico.</p> 
+          </a>
+        </div>
+
+        <div class="services__content-box">
+          <a href="/seguridad-de-aplicaciones/">
+            <div class="services__content-box-img">
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/n2.png" alt="logo ciberseguridad">
+            </div>
+            <h3 class="services__content-box-title">Seguridad de Aplicaciones</h3>
+            <p class="services__content-box-text">Asegura tus aplicaciones web y móviles contra vulnerabilidades.</p> 
+          </a>
+        </div>
+
+        <div class="services__content-box">
+          <a href="/seguridad-de-servidores/">
+            <div class="services__content-box-img">
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/h3.png" alt="logo ciberseguridad">
+            </div>
+            <h3 class="services__content-box-title">Seguridad de Servidores</h3>
+            <p class="services__content-box-text">Protección robusta para servidores críticos de tu empresa.</p> 
+          </a>
+        </div>
+
+        <div class="services__content-box">
+          <a href="/seguridad-de-redes-wi-fi/">
+            <div class="services__content-box-img">
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/s4.png" alt="logo ciberseguridad">
+            </div>
+            <h3 class="services__content-box-title">Seguridad de Redes Wi-Fi</h3>
+            <p class="services__content-box-text">Asegura tus redes Wi-Fi contra accesos no autorizados.</p> 
+          </a>
+        </div>
+
+        <div class="services__content-box">
+          <a href="/seguridad-de-acceso-remoto/">
+            <div class="services__content-box-img">
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/s3.png" alt="logo ciberseguridad">
+            </div>
+            <h3 class="services__content-box-title">Seguridad de Acceso Remoto</h3>
+            <p class="services__content-box-text">Garantiza conexiones seguras para tus trabajadores remotos.</p>
+          </a>
+        </div>
+
       </div>
     </section>
 
@@ -46,132 +137,54 @@
     ?>
 
     <section class="services" id="services">
-      <div class="services__content">
+      <div class="services__content main-container">
         <h2 class="section-title">Protección Total para tu Empresa</h2>
-        <p class="services__content-text">Ofrecemos servicios diseñados para mantener segura tu operación empresarial.</p>
+        <p class="services__content-text">Ofrecemos servicios diseñados para mantener segura tu operación empresarial. 
+          <strong>Preguntanos por los siguientes servicios:</strong></p>
 
-        <div class="services__content-boxes main-carousel">
-
-          <div class="services__content-box">
-            <a href="/ciberseguridad/">
-              <div class="services__content-box-img">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/n3.png" alt="logo ciberseguridad">
-              </div>
-              <h3 class="services__content-box-title">Ciberseguridad</h3>
-              <p class="services__content-box-text">Soluciones para proteger tu empresa contra amenazas cibernéticas.</p>
-            </a>
+        <div class="home__intro-boxes">
+          <div class="home__intro-box">
+            <div class="home__intro-box-img">
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/n3.png" alt="logo ciberseguridad">
+            </div>
+            <h3 class="home__intro-box-title">Análisis de vulnerabilidad</h3>
+            <p class="home__intro-box-text">Identificación, evaluación y validación de vulnerabilidades mediante herramientas y escaneos automatizados.</p>
           </div>
-
-          <div class="services__content-box">
-            <a href="/proteccion-de-endpoints/">
-              <div class="services__content-box-img">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/n5.png" alt="logo endoints">
-              </div>
-              <h3 class="services__content-box-title">Protección de Endpoints</h3>
-              <p class="services__content-box-text">Seguridad avanzada para todos tus dispositivos, desde computadoras hasta móviles.</p>
-            </a>
+          <div class="home__intro-box">
+            <div class="home__intro-box-img">
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/n5.png" alt="logo endoints">
+            </div>
+            <h3 class="home__intro-box-title">Consultoría en Ciberseguridad</h3>
+            <p class="home__intro-box-text">Evaluación del nivel de seguridad y presentación de soluciones personalizadas para su negocio.</p>
           </div>
-
-          <div class="services__content-box">
-            <a href="/firewall/">
-              <div class="services__content-box-img">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/n6.png" alt="logo Firewall">
-              </div>
-              <h3 class="services__content-box-title">Firewall</h3>
-              <p class="services__content-box-text">Defensa robusta para evitar accesos no autorizados y proteger tus redes.</p>
-            </a>
+          <div class="home__intro-box">
+            <div class="home__intro-box-img">
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/n6.png" alt="logo antivirus">
+            </div>
+            <h3 class="home__intro-box-title">Test de ingeniería social</h3>
+            <p class="home__intro-box-text">Simulación de ataques psicológicos para evaluar la conciencia de los empleados sobre ciberamenazas.</p>
           </div>
-
-          <div class="services__content-box">
-            <a href="/antivirus/">
-              <div class="services__content-box-img">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/s5.png" alt="logo antivirus">
-              </div>
-              <h3 class="services__content-box-title">Antivirus</h3>
-              <p class="services__content-box-text">Protección eficaz contra malware, virus y otras amenazas digitales.</p>
-            </a>
+          <div class="home__intro-box">
+            <div class="home__intro-box-img">
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/n7.png" alt="logo antivirus">
+            </div>
+            <h3 class="home__intro-box-title">Test de penetración / pentest</h3>
+            <p class="home__intro-box-text">Identificación y explotación de vulnerabilidades mediante técnicas y scripts que simulan ciberataques reales.</p>
           </div>
-
-          <div class="services__content-box">
-            <a href="/seguridad-de-red/">
-              <div class="services__content-box-img">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/s2.png" alt="logo ciberseguridad">
-              </div>
-              <h3 class="services__content-box-title">Seguridad de Red</h3>
-              <p class="services__content-box-text">Protección integral para mantener seguras tus redes empresariales.</p>
-            </a>
+          <div class="home__intro-box">
+            <div class="home__intro-box-img">
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/n6.png" alt="logo antivirus">
+            </div>
+            <h3 class="home__intro-box-title">Capacitaciones y Concientización</h3>
+            <p class="home__intro-box-text">Programas diseñados para concienciar a los equipos y responder adecuadamente a las amenazas de ciberseguridad.</p>
           </div>
-
-          <div class="services__content-box">
-            <a href="/gestion-de-amenazas/">
-              <div class="services__content-box-img">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/s6.png" alt="logo ciberseguridad">
-              </div>
-              <h3 class="services__content-box-title">Gestión de Amenazas</h3>
-              <p class="services__content-box-text">Monitoreo y respuesta a incidentes para proteger tu infraestructura.</p> 
-            </a>
+          <div class="home__intro-box">
+            <div class="home__intro-box-img">
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/n7.png" alt="logo antivirus">
+            </div>
+            <h3 class="home__intro-box-title">Test de phishing</h3>
+            <p class="home__intro-box-text">Envío de comunicaciones falsas para evaluar la capacidad de los empleados para reconocer y responder a ataques de phishing.</p>
           </div>
-
-          <div class="services__content-box">
-            <a href="/seguridad-en-la-nube/">
-              <div class="services__content-box-img">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/n7.png" alt="logo ciberseguridad">
-              </div>
-              <h3 class="services__content-box-title">Seguridad en la Nube</h3>
-              <p class="services__content-box-text">Protege tus aplicaciones y datos en entornos cloud.</p> 
-            </a>
-          </div>
-
-          <div class="services__content-box">
-            <a href="/seguridad-de-correo-electronico/">
-              <div class="services__content-box-img">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/correo.png" alt="logo ciberseguridad">
-              </div>
-              <h3 class="services__content-box-title">Seguridad de Correo Electrónico</h3>
-              <p class="services__content-box-text">Protección contra phishing, spam y otras amenazas de correo electrónico.</p> 
-            </a>
-          </div>
-
-          <div class="services__content-box">
-            <a href="/seguridad-de-aplicaciones/">
-              <div class="services__content-box-img">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/n2.png" alt="logo ciberseguridad">
-              </div>
-              <h3 class="services__content-box-title">Seguridad de Aplicaciones</h3>
-              <p class="services__content-box-text">Asegura tus aplicaciones web y móviles contra vulnerabilidades.</p> 
-            </a>
-          </div>
-
-          <div class="services__content-box">
-            <a href="/seguridad-de-servidores/">
-              <div class="services__content-box-img">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/h3.png" alt="logo ciberseguridad">
-              </div>
-              <h3 class="services__content-box-title">Seguridad de Servidores</h3>
-              <p class="services__content-box-text">Protección robusta para servidores críticos de tu empresa.</p> 
-            </a>
-          </div>
-
-          <div class="services__content-box">
-            <a href="/seguridad-de-redes-wi-fi/">
-              <div class="services__content-box-img">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/s4.png" alt="logo ciberseguridad">
-              </div>
-              <h3 class="services__content-box-title">Seguridad de Redes Wi-Fi</h3>
-              <p class="services__content-box-text">Asegura tus redes Wi-Fi contra accesos no autorizados.</p> 
-            </a>
-          </div>
-
-          <div class="services__content-box">
-            <a href="/seguridad-de-acceso-remoto/">
-              <div class="services__content-box-img">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/s3.png" alt="logo ciberseguridad">
-              </div>
-              <h3 class="services__content-box-title">Seguridad de Acceso Remoto</h3>
-              <p class="services__content-box-text">Garantiza conexiones seguras para tus trabajadores remotos.</p>
-            </a>
-          </div>
-
         </div>
       </div>
     </section>

@@ -109,7 +109,7 @@ const faqAccordion = () => {
 }
 
 const loadFormContact = () => {
-  const btnAbrirPopup = document.querySelectorAll( '.contact' );
+  const btnAbrirPopup = document.querySelectorAll( '.contact, .home__intro-box' );
   const btnClosePopup = document.querySelector( '.popup__close' );
   const body = document.body;
   const backdrop = document.querySelector( '.popup__overlay' );
@@ -167,7 +167,7 @@ const carrouselServices = () => {
     new Flickity(carousel, {
       cellAlign: 'center',
       contain: true,
-      pageDots: true,
+      pageDots: false,
       freeScroll: false,
       wrapAround: true
     });

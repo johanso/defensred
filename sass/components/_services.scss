@@ -30,13 +30,14 @@
 
     &-boxes {
       grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      width: calc(100vw - 8rem);
+      margin: auto;
       gap: .5rem;
       display: grid;
     }
 
     &-box {
       background-color: $white-color;
-      box-shadow: 0 0 1px 1px $border-color;
       text-align: center;
       padding: 2rem;
       padding-top: 2.5rem;
@@ -107,6 +108,16 @@
         -webkit-box-orient: vertical;
         overflow: hidden;
         text-overflow: ellipsis;
+      }
+
+      &::after {
+        content: '';
+        width: 1px;
+        background: rgba($border-color, .8);
+        height: 100%;
+        position: absolute;
+        right: -.5rem;
+        top: 0;
       }
 
     }
