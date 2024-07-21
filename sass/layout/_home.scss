@@ -44,12 +44,15 @@
       border-radius: .5rem;
       cursor: pointer;
 
+      * {
+        transition: all .1s ease-in-out;
+      }
+
       &:last-child {
         &::after {
           display: none;
         }
       }
-
 
       &-title {
         color: $text-color;
@@ -69,11 +72,23 @@
         justify-content: center;
         align-items: center;
         border-radius: 50%;
-        border: 2px solid $tertiary-color;
+        background: $secondary-color;
         margin-bottom: 1rem;
         padding: 1rem;
         img {
-          filter: saturate(.5);
+          max-width: 100%;
+          height: auto;
+          transform: scale(0.8);
+          filter: invert(1);
+        }
+      }
+
+      &:hover {
+        .home__intro-box-img {
+          background-color: rgba($secondary-color, .8);
+          img {
+            transform: scale(0.7);
+          }
         }
       }
     }

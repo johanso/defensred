@@ -145,42 +145,45 @@
         <div class="home__intro-boxes">
           <div class="home__intro-box">
             <div class="home__intro-box-img">
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/n3.png" alt="logo ciberseguridad">
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/analisis.png" alt="vulnerabilidad">
+              <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <path d="M69.8,-23C76.3,-2.7,57.6,25.4,32.9,42.8C8.1,60.3,-22.7,67,-39.1,54.8C-55.5,42.7,-57.5,11.7,-48.6,-11.9C-39.7,-35.5,-19.8,-51.7,5.9,-53.6C31.7,-55.6,63.3,-43.2,69.8,-23Z" transform="translate(100 100)"></path>
+              </svg>
             </div>
             <h3 class="home__intro-box-title">Análisis de vulnerabilidad</h3>
             <p class="home__intro-box-text">Identificación, evaluación y validación de vulnerabilidades mediante herramientas y escaneos automatizados.</p>
           </div>
           <div class="home__intro-box">
             <div class="home__intro-box-img">
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/n5.png" alt="logo endoints">
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/consultoria.png" alt="Ciberseguridad">
             </div>
             <h3 class="home__intro-box-title">Consultoría en Ciberseguridad</h3>
             <p class="home__intro-box-text">Evaluación del nivel de seguridad y presentación de soluciones personalizadas para su negocio.</p>
           </div>
           <div class="home__intro-box">
             <div class="home__intro-box-img">
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/n6.png" alt="logo antivirus">
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/test-social.png" alt="ingeniería social">
             </div>
             <h3 class="home__intro-box-title">Test de ingeniería social</h3>
             <p class="home__intro-box-text">Simulación de ataques psicológicos para evaluar la conciencia de los empleados sobre ciberamenazas.</p>
           </div>
           <div class="home__intro-box">
             <div class="home__intro-box-img">
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/n7.png" alt="logo antivirus">
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/sistema-de-seguridad.png" alt="pentest">
             </div>
             <h3 class="home__intro-box-title">Test de penetración / pentest</h3>
             <p class="home__intro-box-text">Identificación y explotación de vulnerabilidades mediante técnicas y scripts que simulan ciberataques reales.</p>
           </div>
           <div class="home__intro-box">
             <div class="home__intro-box-img">
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/n6.png" alt="logo antivirus">
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/proteccion-de-datos.png" alt="Capacitaciones">
             </div>
             <h3 class="home__intro-box-title">Capacitaciones y Concientización</h3>
             <p class="home__intro-box-text">Programas diseñados para concienciar a los equipos y responder adecuadamente a las amenazas de ciberseguridad.</p>
           </div>
           <div class="home__intro-box">
             <div class="home__intro-box-img">
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/n7.png" alt="logo antivirus">
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/privacidad.png" alt="phishing">
             </div>
             <h3 class="home__intro-box-title">Test de phishing</h3>
             <p class="home__intro-box-text">Envío de comunicaciones falsas para evaluar la capacidad de los empleados para reconocer y responder a ataques de phishing.</p>
