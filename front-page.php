@@ -89,16 +89,6 @@
         </div>
 
         <div class="services__content-box">
-          <a href="/seguridad-de-aplicaciones/">
-            <div class="services__content-box-img">
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/n2.png" alt="logo ciberseguridad">
-            </div>
-            <h3 class="services__content-box-title">Seguridad de Aplicaciones</h3>
-            <p class="services__content-box-text">Asegura tus aplicaciones web y móviles contra vulnerabilidades.</p> 
-          </a>
-        </div>
-
-        <div class="services__content-box">
           <a href="/seguridad-de-servidores/">
             <div class="services__content-box-img">
               <img src="<?php echo get_template_directory_uri(); ?>/assets/h3.png" alt="logo ciberseguridad">
