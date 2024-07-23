@@ -86,13 +86,19 @@
 
 .page {
   &__comparison {
-    margin: 0 auto;
+    margin: 0 auto 2rem;
     width: 768px;
 
+    .comparison__title {
+      margin: -2rem 0 2rem;
+      font-size: 1.8rem;
+      h1 {
+        font-size: inherit;
+        font-weight: bold;
+      }
+    }
+  
     .comparison-table {
-      padding: 1rem;
-      background: rgb(249 249 249);
-      margin-bottom: 2rem;
       &:empty {
         display: none;
       }
@@ -100,10 +106,16 @@
       .table th {
         border: none;
       }
+      .message {
+        text-align: center;
+        margin: 2rem 0;
+        border: 1px solid $border-color;
+        padding: 2rem;
+      }
     }
 
     .comparison-form {
-      margin-bottom: 1rem;
+      margin-bottom: 2rem;
     }
 
     .comparison-selects {

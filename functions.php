@@ -159,8 +159,21 @@ function enqueue_bootstrap_select_assets()
     if (!wp_script_is('jquery', 'enqueued')) {
       wp_enqueue_script('jquery');
     }
-    wp_enqueue_style('bootstrap-select-css', get_template_directory_uri() . '/styles/bootstrap-select.min.css', array(), '1.13.18', 'all');	
-    wp_enqueue_script('bootstrap-select-js', get_template_directory_uri() . '/js/bootstrap-select.min.js', array('jquery'), '1.13.18', true);
+	  
+	  wp_enqueue_style('bootstrap-select-css', get_template_directory_uri() . '/styles/bootstrap-select.min.css', array(), '1.13.18', 'all');	
+		wp_enqueue_script('bootstrap-select-js', get_template_directory_uri() . '/js/bootstrap-select.min.js', array('jquery'), '1.13.18', true);
+	  
+	  
+	  // Encolar el CSS de Bootstrap (opcional)
+    if (!wp_style_is('bootstrap-css', 'enqueued')) {
+      wp_enqueue_style('bootstrap-css', 'https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css', array(), '4.5.2');
+    }
+
+    // Encolar el JavaScript de Bootstrap (opcional)
+    if (!wp_script_is('bootstrap-js', 'enqueued')) {
+      wp_enqueue_script('bootstrap-js', 'https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js', array('jquery'), '4.5.2', true);
+    }
+	      
   }
 }
 add_action('wp_enqueue_scripts', 'enqueue_bootstrap_select_assets');

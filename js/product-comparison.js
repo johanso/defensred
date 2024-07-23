@@ -205,17 +205,17 @@ jQuery(document).ready(function ($) {
 
       } catch (error) {
         console.error('Error fetching firewall details:', error);
-        $('#comparison-table').html('<p>Error al cargar los firewalls. Por favor, inténtalo de nuevo.</p>');
+        $('#comparison-table').html('<p class="message">Error al cargar los firewalls. Por favor, inténtalo de nuevo.</p>');
       }
     } else {
-      $('#comparison-table').html('<p>Por favor selecciona los datos para mostrar la comparación</p>');
+      $('#comparison-table').html('<p class="message">Por favor selecciona los datos para mostrar la comparación</p>');
     }
   }
 
   $('#brand1').on('change', function () {
     if ($(this).val()) {
       loadFirewalls($('#firewall1')[0], $(this).val());
-      $('#comparison-table').html('<p>Por favor selecciona los datos para mostrar la comparación</p>');
+      $('#comparison-table').html('<p class="message">Por favor selecciona los datos para mostrar la comparación</p>');
     } else {
       $('#firewall1').parent().hide();
       $('#firewall1').empty(); // Limpia las opciones del select
@@ -227,7 +227,7 @@ jQuery(document).ready(function ($) {
   $('#brand2').on('change', function () {
     if ($(this).val()) {
       loadFirewalls($('#firewall2')[0], $(this).val());
-      $('#comparison-table').html('<p>Por favor selecciona los datos para mostrar la comparación</p>');
+      $('#comparison-table').html('<p class="message">Por favor selecciona los datos para mostrar la comparación</p>');
     } else {
       $('#firewall2').parent().hide();
       $('#firewall2').empty(); // Limpia las opciones del select
@@ -238,7 +238,7 @@ jQuery(document).ready(function ($) {
 
   $('#firewall1').on('change', function() {
     if (!$(this).val()) {
-      $('#comparison-table').html('<p>Por favor selecciona los datos para mostrar la comparación</p>');
+      $('#comparison-table').html('<p class="message">Por favor selecciona los datos para mostrar la comparación</p>');
     } else {
       compareFirewalls();
     }
@@ -246,7 +246,7 @@ jQuery(document).ready(function ($) {
 
   $('#firewall2').on('change', function() {
     if (!$(this).val()) {
-      $('#comparison-table').html('<p>Por favor selecciona los datos para mostrar la comparación</p>');
+      $('#comparison-table').html('<p class="message">Por favor selecciona los datos para mostrar la comparación</p>');
     } else {
       compareFirewalls();
     }
