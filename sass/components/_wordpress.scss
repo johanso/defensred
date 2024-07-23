@@ -87,6 +87,7 @@ ol.wp-block-list {
 .img-content-left-desktop img {
   display: none;
   @include mq(lg) {
+    display: block;
     float: left;
     margin: 2rem 2rem 2rem 0;
   }
