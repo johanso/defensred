@@ -7,7 +7,6 @@ require get_template_directory() . '/includes/querypost.php';
 // add scripts and styles
 function travels_styles()
 {
-
   wp_enqueue_style('style', get_stylesheet_uri(), array(), '1.0.0', 'all');
   wp_enqueue_style('icons', get_template_directory_uri() . '/icons/style.css', array(), '1.0.0', 'all');
   wp_enqueue_style('flickity-styles', get_template_directory_uri() . '/styles/flickity.css', array(), '8.0.1', 'all');	
@@ -157,26 +156,11 @@ add_filter('rest_prepare_firewall', 'add_featured_image_url_to_rest', 10, 3);
 function enqueue_bootstrap_select_assets()
 {
   if (is_page(380)) {
-    // Encolar jQuery si no está ya encolado
     if (!wp_script_is('jquery', 'enqueued')) {
       wp_enqueue_script('jquery');
     }
-
-    // Encolar CSS de Bootstrap Select
-    wp_enqueue_style('bootstrap-select-css', 'https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.18/css/bootstrap-select.min.css', array(), '1.13.18');
-
-    // Encolar JavaScript de Bootstrap Select
-    wp_enqueue_script('bootstrap-select-js', 'https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.18/js/bootstrap-select.min.js', array('jquery'), '1.13.18', true);
-
-    // Encolar el CSS de Bootstrap (opcional)
-    if (!wp_style_is('bootstrap-css', 'enqueued')) {
-      wp_enqueue_style('bootstrap-css', 'https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css', array(), '4.5.2');
-    }
-
-    // Encolar el JavaScript de Bootstrap (opcional)
-    if (!wp_script_is('bootstrap-js', 'enqueued')) {
-      wp_enqueue_script('bootstrap-js', 'https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js', array('jquery'), '4.5.2', true);
-    }
+    wp_enqueue_style('bootstrap-select-css', get_template_directory_uri() . '/styles/bootstrap-select.min.css', array(), '1.13.18', 'all');	
+    wp_enqueue_script('bootstrap-select-js', get_template_directory_uri() . '/js/bootstrap-select.min.js', array('jquery'), '1.13.18', true);
   }
 }
 add_action('wp_enqueue_scripts', 'enqueue_bootstrap_select_assets');
