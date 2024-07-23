@@ -83,3 +83,11 @@ ol.wp-block-list {
 .bootstrap-select .dropdown-menu {
   max-height: 15rem;
 }
+
+.img-content-left-desktop img {
+  display: none;
+  @include mq(lg) {
+    float: left;
+    margin: 2rem 2rem 2rem 0;
+  }
+}
