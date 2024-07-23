@@ -121,7 +121,7 @@ jQuery(document).ready(function ($) {
 
         $('#comparison-table').html(`
         <div class="table-responsive">
-          <table class="table table-striped">
+          <table class="table">
             <thead class="border-light">
               <tr>
                 <th scope="col" width="30%"></th>
